@@ -1,18 +1,19 @@
 import Home from './components/Home'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import DiceGame from './components/DiceGame';
+import DiceGame from './components//Dice_Game/DiceGame';
 
 function App() {
   return (
     <Router>
       <div className="App">
         {/* Navbar!? */}
-        <DiceGame />
+        <Home />
+
         <Switch>
           <Route path="/">
+            <DiceGame />
 
-            <Home />
 
 
           </Route>
