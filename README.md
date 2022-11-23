@@ -23,3 +23,9 @@ This project is built arround the idea of building a fun little web app for my 3
 ### NOTES - 
 BackGround Photo by <a href="https://unsplash.com/es/@pramodtiwari?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pramod Tiwari</a> on <a href="https://unsplash.com/t/experimental?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
+
+Sounds Used
+
+Dice Roll - https://freesound.org/s/574449/ F.M.Audio
+Dice Roll - https://freesound.org/s/574445/ F.M.Audio
+Dice Roll - https://freesound.org/s/389721/ - Uminari 
