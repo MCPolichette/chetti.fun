@@ -52,9 +52,7 @@ const Dice = ({ diceValue, diceRoll }) => {
     }
 
     return (
-
         <div className="container">
-
             <div className="row" style={{ marginTop: 100 }}>
                 <div className="column">
                     <div className="panel" >
