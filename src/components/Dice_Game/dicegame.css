@@ -62,7 +62,7 @@
 .three {
     display: flex;
     justify-content: space-between;
-    transform: rotateY(90deg) translateZ(100px);
+    transform: rotateY(-90deg) translateZ(100px);
     z-index: 3;
 }
 
@@ -95,7 +95,7 @@
 .five {
     display: flex;
     justify-content: space-between;
-    transform: rotateY(-90deg) translateZ(100px);
+    transform: rotateY(90deg) translateZ(100px);
     z-index: 5;
 }
 
@@ -116,7 +116,7 @@
 
 .diceBtn {
     background-color: rgb(24, 137, 218);
-    padding: 1em;
-    margin: 1em;
+    padding: .8em;
+    margin: .6em;
     font-size: x-large;
 }
