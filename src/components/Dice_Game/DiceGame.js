@@ -1,3 +1,4 @@
+import React from 'react';
 import Dice from "./Dice";
 import "./dicegame.css";
 import { useState, useEffect } from "react";
