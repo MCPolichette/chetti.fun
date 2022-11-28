@@ -42,5 +42,6 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
-  }
+  },
+  "homepage": "https://chetti.fun"
 }
