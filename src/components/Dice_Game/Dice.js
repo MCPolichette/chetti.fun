@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import UIfx from 'uifx';
-
 import rollSound_1 from './sounds/389721__uminari__rolling-rocks-01.wav';
 import rollSound_2 from './sounds/574445__f-m-audio__kicking-large-stones-down-shoreline-on-stony-beach-5.wav';
 import rollSound_3 from './sounds/574449__f-m-audio__pushing-large-stones-down-shoreline-on-stony-beach-2.wav';
 
 const Dice = ({ diceValue, diceRoll }) => {
-
     let d_translateZ = "translateZ(-100px)"
     let d_rotateY = "rotateY(-45deg)"
     let d_rotateX = "rotateX(-45deg)"
