@@ -1,6 +1,6 @@
 .dice {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     position: relative;
     transform-style: preserve-3d;
     transition: transform .8s;
@@ -9,8 +9,8 @@
 
 .panel {
     border-radius: 10px;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     perspective: 400px;
     position: relative;
     left: 50%;
@@ -20,8 +20,8 @@
 
 .dot {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     margin: 8px;
     background-color: Black;
@@ -30,10 +30,10 @@
 .side {
     position: absolute;
     background-color: rgb(231, 218, 218);
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 16px;
-    line-height: 200px;
+    line-height: 150px;
     border-color: rgb(72, 71, 71);
     border-width: 5px;
     border-style: ridge;
@@ -44,14 +44,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: rotateX(-90deg) translateZ(100px);
+    transform: rotateX(-90deg) translateZ(74px);
     z-index: 1;
 }
 
 .two {
     display: flex;
     justify-content: space-between;
-    transform: rotateY(180deg) translateZ(100px);
+    transform: rotateY(180deg) translateZ(74px);
     z-index: 2;
 }
 
@@ -62,7 +62,7 @@
 .three {
     display: flex;
     justify-content: space-between;
-    transform: rotateY(-90deg) translateZ(100px);
+    transform: rotateY(-90deg) translateZ(74px);
     z-index: 3;
 }
 
@@ -76,7 +76,7 @@
 
 .four {
     z-index: 4;
-    transform: rotateY(0deg) translateZ(100px);
+    transform: rotateY(0deg) translateZ(74px);
 }
 
 .four,
@@ -95,7 +95,7 @@
 .five {
     display: flex;
     justify-content: space-between;
-    transform: rotateY(90deg) translateZ(100px);
+    transform: rotateY(90deg) translateZ(74px);
     z-index: 5;
 }
 
@@ -110,7 +110,7 @@
 }
 
 .six {
-    transform: rotateX(90deg) translateZ(100px);
+    transform: rotateX(90deg) translateZ(74px);
     z-index: 6;
 }
 

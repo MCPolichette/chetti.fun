@@ -9,8 +9,13 @@ body {
   background-attachment: fixed;
   background-size: 120%;
   margin: 0;
+  /* font-family: 'Lilita One', cursive; */
+  font-family: 'Fredoka One', cursive;
+  color: white
 }
 
-h1 {
-  color: white
+
+
+.hidden {
+  opacity: 0
 }
