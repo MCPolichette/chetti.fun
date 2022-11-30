@@ -116,7 +116,8 @@
 
 .diceBtn {
     background-color: rgb(24, 137, 218);
-    padding: .8em;
-    margin: .6em;
-    font-size: x-large;
+    padding: .5em;
+    margin: .5em;
+    font-size: large;
+    width: 3.3em
 }

@@ -8,12 +8,12 @@ import rollSound_3 from './sounds/574449__f-m-audio__pushing-large-stones-down-s
 
 const Dice = ({ diceValue, diceRoll, size }) => {
     var translateZ = size;
-    let shrink = (size * 2.5)
+    let shrink = (size * 3.5)
     var rotateY = -45;
     var rotateX = -45;
     let d_translateZ = "translateZ(-100px)"
     const [diceDisplay, setDiceDisplay] = useState("translateZ(" + translateZ + "px) rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg) ")
-    console.log(diceDisplay)
+    // console.log(diceDisplay)
     let rnd;
     let x, y;
     const rollSounds = [new UIfx(rollSound_1), new UIfx(rollSound_2), new UIfx(rollSound_3)]
@@ -43,18 +43,17 @@ const Dice = ({ diceValue, diceRoll, size }) => {
             setDiceDisplay("translateZ(" + shrink + "px) rotateY(-45deg) rotateX(-45deg)")
         }
         let z = Math.floor(Math.random() * 90)
-        setDiceDisplay("translateZ(" + shrink + "px) rotateY(" + (y - z) + "deg) rotateX(" + (x + z) + "deg)")
+        setDiceDisplay("translateZ(" + shrink + "px) rotateY(" + (y - z * 2) + "deg) rotateX(" + (x + z * 2) + "deg) translate(-80%, -80%)")
         setTimeout(function () {
             let nd_rotateY = "rotateY(" + x + 900 + "deg)";
             let nd_rotateX = "rotateX(" + y + 720 + "deg)";
             setDiceDisplay("translateZ(" + (shrink * 1.5) + "px)" + nd_rotateX + nd_rotateY)
-            diceValue = (rnd)
+
             let rndsound = Math.floor(Math.random() * 3);
             rollSounds[rndsound].play()
             diceRoll(diceValue)
         }, 500)
         setTimeout(function () {
-
             console.log(x, y, rnd, diceValue)
             let nd_rotateY = "rotateY(" + x + "deg)";
             let nd_rotateX = "rotateX(" + y + "deg)";

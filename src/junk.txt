@@ -1,0 +1,23 @@
+Keeping this refernce text
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Fredoka+One&family=Lilita+One&family=Luckiest+Guy&family=Passion+One&family=Rubik+Moonrocks&family=Titan+One&display=swap" rel="stylesheet">
+
+CSS rules to specify families
+
+    font-family: 'Alfa Slab One', cursive;
+
+    font-family: 'Anton', sans-serif;
+
+    font-family: 'Fredoka One', cursive;
+
+    font-family: 'Lilita One', cursive;
+
+    font-family: 'Luckiest Guy', cursive;
+
+    font-family: 'Passion One', cursive;
+
+    font-family: 'Rubik Moonrocks', cursive;
+
+    font-family: 'Titan One', cursive;

@@ -32,5 +32,8 @@ Dice Roll - https://freesound.org/s/389721/ - Uminari
 
 Error - https://freesound.org/s/419023/ -Jacco18
 
+<a href="https://www.flaticon.com/free-icons/dice" title="dice icons">Dice icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/poker" title="poker icons">Poker icons created by Freepik - Flaticon</a>
+
 ### in gh-pages to host.
 npm run deploy 
