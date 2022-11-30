@@ -3,7 +3,7 @@
     width: 150px;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform .8s;
+    transition: transform .96s;
     background-color: rgb(198, 198, 198);
 }
 
