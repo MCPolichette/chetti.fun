@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Coin = ({ coinID, active }) => {
-    const x = "-"
+    var x = "-"
     if (active) {
         x = "#"
     }
@@ -12,7 +12,8 @@ const Coin = ({ coinID, active }) => {
             margin: 5,
             background: "#76ff03",
             boxShadow: "0 0 50px #76ff03",
-            width: 20
+            width: 20,
+            zIndex: 10
         }}>{x}
         </div>
     );

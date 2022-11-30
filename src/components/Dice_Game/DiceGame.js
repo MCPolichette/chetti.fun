@@ -12,7 +12,7 @@ import error_snd from '../../site_sounds/419023__jacco18__acess-denied-buzz.mp3'
 const DiceGame = () => {
     const success_sound = new UIfx(success_snd);
     const error_sound = new UIfx(error_snd);
-    const [numbers, setNumbers] = useState([{ number: 1 }, { number: 2 }, { number: 3 }, { number: 4 }, { number: 5 }, { number: 6 }]);
+    const [numbers, setNumbers] = useState([{ number: 2 }, { number: 3 }, { number: 4 }, { number: 5 }, { number: 6 }, { number: 7 }, { number: 8 }, { number: 9 }, { number: 10 }, { number: 11 }, { number: 12 }]);
     const maxScore = 5
     const [score, setScore] = useState(0);
     const [dice_count, setDice_count] = useState(1);
@@ -37,13 +37,14 @@ const DiceGame = () => {
     return (
         <div className="container gamectr">
             <h1 >DICE GAME</h1>
-            <h6> this is a work in progress</h6>
+            <p> I think that my 3 year old is capable of reading two dice, so I've duplicated the dice roll.
+                At this moment, the buttons will only reflect the value of the last rolled dice.</p>
 
             <div className="container playGame ">
                 <Coins score={score} maxScore={maxScore} />
                 <div className='row  justify-content-center'>
-                    <Dice diceValue={diceValue} diceRoll={diceRoll} size={-100} />
-
+                    <Dice diceValue={diceValue} diceRoll={diceRoll} size={-150} />
+                    <Dice diceValue={diceValue} diceRoll={diceRoll} size={-150} />
                 </div>
                 <div className="row">
                     <div className="col">
