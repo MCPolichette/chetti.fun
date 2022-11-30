@@ -1,23 +1,27 @@
 self.__precacheManifest = [
   {
-    "revision": "a1f8d3ad11f6d0f6d5d0",
-    "url": "/static/css/main.cd9e508d.chunk.css"
+    "revision": "23fec45ed16b628c77d2",
+    "url": "/static/css/main.4772be04.chunk.css"
   },
   {
-    "revision": "a1f8d3ad11f6d0f6d5d0",
-    "url": "/static/js/main.a1f8d3ad.chunk.js"
+    "revision": "23fec45ed16b628c77d2",
+    "url": "/static/js/main.23fec45e.chunk.js"
   },
   {
-    "revision": "bb2d15f8b100106d30b0",
-    "url": "/static/js/1.bb2d15f8.chunk.js"
+    "revision": "73c4a386b51143b368b7",
+    "url": "/static/js/1.73c4a386.chunk.js"
   },
   {
-    "revision": "51f451d9c647af255136",
-    "url": "/static/js/2.51f451d9.chunk.js"
+    "revision": "a949535f732470681797",
+    "url": "/static/js/2.a949535f.chunk.js"
   },
   {
-    "revision": "2ff3dd98650ffb28a13e",
-    "url": "/static/js/runtime~main.2ff3dd98.js"
+    "revision": "c842cea4958dad719a98",
+    "url": "/static/js/runtime~main.c842cea4.js"
+  },
+  {
+    "revision": "451ee05dac3f16c934e07898e53033ce",
+    "url": "/static/media/dice.451ee05d.png"
   },
   {
     "revision": "ec0eb703105cbbedfd6f20489180f2f5",
@@ -44,7 +48,7 @@ self.__precacheManifest = [
     "url": "/static/media/pramod-tiwari-3UgbE1b43j8-unsplash.7bd4b931.jpg"
   },
   {
-    "revision": "caef1bc0f831b503eb411e830fad2ea3",
+    "revision": "813d96bcb40472adb178c90289722c2e",
     "url": "/index.html"
   }
 ];
