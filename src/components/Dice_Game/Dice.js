@@ -8,6 +8,7 @@ import rollSound_3 from './sounds/574449__f-m-audio__pushing-large-stones-down-s
 
 const Dice = ({ diceValue, diceRoll, size }) => {
     var translateZ = size;
+    let shrink = (size * 2.5)
     var rotateY = -45;
     var rotateX = -45;
     let d_translateZ = "translateZ(-100px)"
@@ -17,7 +18,7 @@ const Dice = ({ diceValue, diceRoll, size }) => {
     let x, y;
     const rollSounds = [new UIfx(rollSound_1), new UIfx(rollSound_2), new UIfx(rollSound_3)]
     const diceroll = (e) => {
-        let timeout = 0;
+        let timeout = 600;
         let startroll = "rotateY(880 deg) rotateX(900 deg)"
         setDiceDisplay(startroll)
         e.preventDefault();
@@ -38,17 +39,28 @@ const Dice = ({ diceValue, diceRoll, size }) => {
         }
         if (rnd == diceValue) {
             console.log("MATCH");
-            timeout = 800
-            setDiceDisplay("translateZ(-100px) rotateY(-45deg) rotateX(-45deg)")
+            timeout = 900
+            setDiceDisplay("translateZ(" + shrink + "px) rotateY(-45deg) rotateX(-45deg)")
         }
+        let z = Math.floor(Math.random() * 90)
+        setDiceDisplay("translateZ(" + shrink + "px) rotateY(" + (y - z) + "deg) rotateX(" + (x + z) + "deg)")
         setTimeout(function () {
+            let nd_rotateY = "rotateY(" + x + 900 + "deg)";
+            let nd_rotateX = "rotateX(" + y + 720 + "deg)";
+            setDiceDisplay("translateZ(" + (shrink * 1.5) + "px)" + nd_rotateX + nd_rotateY)
+            diceValue = (rnd)
+            let rndsound = Math.floor(Math.random() * 3);
+            rollSounds[rndsound].play()
+            diceRoll(diceValue)
+        }, 500)
+        setTimeout(function () {
+
             console.log(x, y, rnd, diceValue)
             let nd_rotateY = "rotateY(" + x + "deg)";
             let nd_rotateX = "rotateX(" + y + "deg)";
             setDiceDisplay(d_translateZ + nd_rotateX + nd_rotateY)
             diceValue = (rnd)
-            let rndsound = Math.floor(Math.random() * 3);
-            rollSounds[rndsound].play()
+
             diceRoll(diceValue)
         }, timeout)
     }
