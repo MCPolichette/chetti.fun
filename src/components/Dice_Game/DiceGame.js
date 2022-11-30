@@ -23,7 +23,7 @@ const DiceGame = () => {
         if (e.target.value == diceValue) {
             success_sound.play();
             // setDiceValue(1)
-            setScore({ score } + 1)
+            setScore(score + 1)
         } else {
             error_sound.play();
         }
@@ -33,16 +33,19 @@ const DiceGame = () => {
     const diceRoll = (value) => {
         setDiceValue(value)
     }
+    const testRoll = (e) => { console.log("succes") }
 
     return (
         <div className="container gamectr">
             <h1 >DICE GAME</h1>
+            <button onClick={testRoll}>TeSt BuTtOn</button>
             <p> I think that my 3 year old is capable of reading two dice, so I've duplicated the dice roll.
                 At this moment, the buttons will only reflect the value of the last rolled dice.</p>
 
             <div className="container playGame ">
                 <Coins score={score} maxScore={maxScore} />
                 <div className='row  justify-content-center'>
+
                     <Dice diceValue={diceValue} diceRoll={diceRoll} size={-150} />
                     <Dice diceValue={diceValue} diceRoll={diceRoll} size={-150} />
                 </div>

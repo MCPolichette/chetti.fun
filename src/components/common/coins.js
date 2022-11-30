@@ -11,10 +11,22 @@ const Coins = ({ score, maxScore }) => {
     const [coinScore, setCoinScore] = useState(coinArr)
 
     return (
+
         <div className="row justify-content-center">
-            {coinScore.map(({ coinId, active }) => (
-                <Coin key={coinId} active={active} />
-            ))}
+            {/* Temporary internal *Coin, while I determine how I want to do this.. MAY remove seperate coin component */}
+            <div className="col-1 rounded-circle" style={{
+                color: 'black',
+                margin: 5,
+                background: "#76ff03",
+                boxShadow: "0 0 50px #76ff03",
+                width: 40,
+                height: 40,
+                zIndex: 10
+            }}>{score}
+            </div>
+            {/* {coinScore.map(({ coinId, active, }) => (
+                // <Coin key={coinId} active={active} />
+            ))} */}
         </div>
     );
 }
