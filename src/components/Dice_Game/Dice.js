@@ -8,14 +8,17 @@ const Dice = ({ diceValue, size }) => {
     var rotateX = -45;
     let d_translateZ = "translateZ(-100px)"
     const [diceDisplay, setDiceDisplay] = useState("translateZ(" + translateZ + "px) rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg) ")
-    // console.log(diceDisplay)
     let timeout = 800
     let x, y;
 
     useEffect(() => {
         switch (diceValue) {
             case 0:
-                console.log("START")
+                let w = (Math.floor(Math.random() * 12) * 90)
+                console.log(w)
+                x = w - 45;
+                y = w - 45;
+                d_translateZ = "translateZ(-180px)";
                 break;
             case 1:
                 x = 720;
