@@ -2,32 +2,46 @@ import React from 'react';
 // import Coin from "./coin";
 import { useState } from "react";
 
-const Coins = ({ score, maxScore }) => {
+const Coins = ({ score }) => {
     // Going to USE COINS as a scoreboard.  MAY create seperate SCOREBOARD component in the future.
     var coinArr = new Array()
-    for (let i = 0; i < maxScore; i++) {
-        coinArr.push({ active: false, coinId: ("coin_" + i) })
+    switch (score) {
+        case 0:
+            coinArr = []
+            break;
+        default:
+            for (let i = 0; i < score; i++) {
+                coinArr.push({ i })
+            }
+            break;
     }
-    const [coinScore, setCoinScore] = useState(coinArr)
+
 
     return (
+        <div className="row justify-content-center" style={{ height: 60 }
+        }>
+            {
+                coinArr.map(({ index }) => (
 
-        <div className="row justify-content-center">
-            {/* Temporary internal *Coin, while I determine how I want to do this.. MAY remove seperate coin component */}
-            <div className="col-1 rounded-circle" style={{
-                color: 'black',
-                margin: 5,
-                background: "#76ff03",
-                boxShadow: "0 0 50px #76ff03",
-                width: 40,
-                height: 40,
-                zIndex: 10
-            }}>{score}
-            </div>
+                    <div key={index} className="col-1 rounded-circle" style={{
+                        color: 'black',
+                        margin: 5,
+                        background: "#76ff03",
+                        boxShadow: "0 0 50px #76ff03",
+                        width: 40,
+                        height: 40,
+                        zIndex: 10,
+                        animation: "bounce 1s infinite"
+
+                    }}>
+                    </div>
+                ))
+            }
+
             {/* {coinScore.map(({ coinId, active, }) => (
                 // <Coin key={coinId} active={active} />
             ))} */}
-        </div>
+        </div >
     );
 }
 
