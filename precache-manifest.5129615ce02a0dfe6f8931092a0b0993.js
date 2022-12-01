@@ -1,27 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "e2a4610139340422ed46",
-    "url": "/static/css/main.f7e6ee40.chunk.css"
+    "revision": "9a525d1740bf0c290a74",
+    "url": "/static/css/main.f0b9a1c0.chunk.css"
   },
   {
-    "revision": "e2a4610139340422ed46",
-    "url": "/static/js/main.e2a46101.chunk.js"
+    "revision": "9a525d1740bf0c290a74",
+    "url": "/static/js/main.9a525d17.chunk.js"
   },
   {
     "revision": "73c4a386b51143b368b7",
     "url": "/static/js/1.73c4a386.chunk.js"
   },
   {
-    "revision": "1e3369032dd378960824",
-    "url": "/static/js/2.1e336903.chunk.js"
+    "revision": "0f87958eb2bf845c931f",
+    "url": "/static/js/2.0f87958e.chunk.js"
   },
   {
     "revision": "c842cea4958dad719a98",
     "url": "/static/js/runtime~main.c842cea4.js"
-  },
-  {
-    "revision": "451ee05dac3f16c934e07898e53033ce",
-    "url": "/static/media/dice.451ee05d.png"
   },
   {
     "revision": "0d0e62da762f9ccf968a3fd365ae9307",
@@ -48,7 +44,11 @@ self.__precacheManifest = [
     "url": "/static/media/pramod-tiwari-3UgbE1b43j8-unsplash.7bd4b931.jpg"
   },
   {
-    "revision": "7c66e395cd8c316e37c0b44038982b14",
+    "revision": "451ee05dac3f16c934e07898e53033ce",
+    "url": "/static/media/dice.451ee05d.png"
+  },
+  {
+    "revision": "002a59239e98118f743a89574fba868b",
     "url": "/index.html"
   }
 ];
