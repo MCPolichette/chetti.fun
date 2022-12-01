@@ -10,7 +10,7 @@ const Home = () => {
             <h1>HOME CONTAINER</h1>
             <hr />
             <h3> Games</h3>
-            <Link to="/dice"><img alt="dicegame" src={diceImage} style={{ width: 200, backgroundColor: "White" }} /></Link>
+            <Link to="/dice"><button className='btn btn-success btn-lg'>DICE GAME !</button></Link>
 
         </div>
     );

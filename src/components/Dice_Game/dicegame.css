@@ -115,9 +115,36 @@
 }
 
 .diceBtn {
-    background-color: rgb(24, 137, 218);
     padding: .5em;
     margin: .5em;
     font-size: large;
     width: 3.3em
+}
+
+/* CUSTOMIZE THE WIGGLE EFFECT LATER */
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    80% {
+        transform: rotate(0deg);
+    }
+
+    85% {
+        transform: rotate(5deg);
+    }
+
+    95% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.wiggle {
+    display: inline-block;
+    animation: wiggle .5s;
 }

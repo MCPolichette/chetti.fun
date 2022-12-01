@@ -16,9 +16,7 @@ function App() {
           <Route path="/dice">
             <DiceGame />
           </Route>
-
         </Switch>
-
       </div>
       <NavBar />
     </Router>
