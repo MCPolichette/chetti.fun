@@ -36,5 +36,8 @@ Win SOUND - https://freesound.org/s/456966/ -FunWithSound
 <a href="https://www.flaticon.com/free-icons/dice" title="dice icons">Dice icons created by Freepik - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/poker" title="poker icons">Poker icons created by Freepik - Flaticon</a>
 
+animations: - https://animate.style/
+
+
 ### in gh-pages to host.
 npm run deploy 

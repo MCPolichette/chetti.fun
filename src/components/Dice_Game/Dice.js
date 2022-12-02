@@ -15,7 +15,6 @@ const Dice = ({ diceValue, size }) => {
         switch (diceValue) {
             case 0:
                 let w = (Math.floor(Math.random() * 12) * 90)
-                console.log(w)
                 x = w - 45;
                 y = w - 45;
                 d_translateZ = "translateZ(-180px)";

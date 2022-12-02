@@ -31,6 +31,7 @@ const DiceGame = () => {
         textShadow: "4px 4px black",
         fontSize: "300%",
         animation: "bounce 4s infinite"
+
     })
 
     const numberClick = (e) => {
@@ -79,6 +80,10 @@ const DiceGame = () => {
         }
         setNumbers(arr)
     }
+    function mostly_random(x) {  //prevents the dice from rolling the same number
+        var num = Math.floor(Math.random() * 6 + 1);
+        return (num === x) ? mostly_random(x) : num;
+    }
 
 
     const testRoll = (e) => {
@@ -92,14 +97,7 @@ const DiceGame = () => {
         let new_roll = []
         let x = 0
         for (let i = 0; i < diceValues.length; i++) {
-            let rnd = Math.floor(Math.random() * 6 + 1);
-            switch (rnd) {
-                case diceValues[i]:
-                    rnd = Math.floor(Math.random() * 6 + 1);
-                    break;
-                default:
-                    break;
-            }
+            let rnd = mostly_random(diceValues[i])
             new_roll.push(rnd);
         };
         resetNumbers()
@@ -122,7 +120,7 @@ const DiceGame = () => {
             >ROLL DICE !</button>
             <h1 >DICE GAME</h1>
             <div className="container playGame " >
-                <Coins score={score} maxScore={maxScore} />
+                <Coins key={"ONLY-ONE"} score={score} maxScore={maxScore} />
                 <div className='row  justify-content-center'>
                     {diceValues.map((value, index) => (
                         <Dice key={index} diceValue={value} size={-150} />
