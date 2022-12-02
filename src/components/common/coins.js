@@ -21,7 +21,7 @@ const Coins = ({ score }) => {
         <div className="row justify-content-center" style={{ height: 60 }
         }>
             {
-                coinArr.map(({ index }) => (
+                coinArr.map(({ coin, index }) => (
 
                     <div key={index} className="col-1 rounded-circle" style={{
                         color: 'black',

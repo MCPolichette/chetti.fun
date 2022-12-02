@@ -4,7 +4,6 @@
     position: relative;
     transform-style: preserve-3d;
     transition: transform .96s;
-    background-color: rgb(198, 198, 198);
 }
 
 .panel {
@@ -29,7 +28,7 @@
 
 .side {
     position: absolute;
-    background-color: rgb(231, 218, 218);
+    background-color: rgb(243, 220, 220);
     width: 150px;
     height: 150px;
     border-radius: 16px;

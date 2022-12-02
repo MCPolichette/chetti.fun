@@ -7,11 +7,15 @@ const Home = () => {
     return (
 
         <div className="container" >
-            <h1>HOME CONTAINER</h1>
+            <p> welcome to </p>
+            <h1>Chetti.fun</h1>
+            <p className="small"> This site was made to help learn better coding, and to provide Ad-Free personalized mobile games for my 3 year old</p>
             <hr />
-            <h3> Games</h3>
-            <Link to="/dice"><button className='btn btn-success btn-lg'>DICE GAME !</button></Link>
-
+            <div className='row'>
+                <h3> Games</h3>
+                <Link to="/dice"><button className='btn btn-success btn-lg'>DICE GAME !</button></Link>
+                <Link to="/memory"><button className='btn btn-success btn-lg'>Memory Game!</button></Link>
+            </div>
         </div>
     );
 }
