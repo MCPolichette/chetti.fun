@@ -1,0 +1,58 @@
+{
+    "family": [
+        {
+            "id": 1,
+            "status": "down",
+            "img": "Gianni",
+            "alt": "Gianni"
+        },
+        {
+            "id": 2,
+            "status": "down",
+            "img": "Imogene",
+            "alt": "Imogene"
+        },
+        {
+            "id": 3,
+            "status": "down",
+            "img": "Emily",
+            "alt": "Emily"
+        },
+        {
+            "id": 4,
+            "status": "down",
+            "img": "Mark",
+            "alt": "Mark"
+        },
+        {
+            "id": 5,
+            "status": "down",
+            "img": "Kangaroo",
+            "alt": "Kangaroo"
+        },
+        {
+            "id": 6,
+            "status": "down",
+            "img": "Grammy",
+            "alt": "Grammy"
+        },
+        {
+            "id": 7,
+            "status": "down",
+            "img": "Grandma",
+            "alt": "Grandma"
+        },
+        {
+            "id": 8,
+            "status": "down",
+            "img": "Grandpa",
+            "alt": "Grandpa"
+        },
+        {
+            "id": 9,
+            "status": "down",
+            "img": "Papa",
+            "alt": "Papa"
+        }
+    ]
+}

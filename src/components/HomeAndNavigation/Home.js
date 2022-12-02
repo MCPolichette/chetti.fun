@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import "./home.css"
 import diceImage from "../../images/dice.png"
 
 const Home = () => {

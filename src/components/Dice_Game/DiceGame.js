@@ -2,7 +2,7 @@ import React from 'react';
 import Dice from "./Dice";
 import Coins from '../common/coins';
 import "./dicegame.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import UIfx from 'uifx';
 import win_snd from '../../site_sounds/456966__funwithsound__success-fanfare-trumpets.mp3';
 import success_snd from '../../site_sounds/318968__djm62__successarpeggio.flac';
