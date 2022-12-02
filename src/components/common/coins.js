@@ -1,6 +1,4 @@
 import React from 'react';
-// import Coin from "./coin";
-import { useState } from "react";
 
 const Coins = ({ score }) => {
     // Going to USE COINS as a scoreboard.  MAY create seperate SCOREBOARD component in the future.
