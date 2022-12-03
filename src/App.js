@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./components/HomeAndNavigation/Home.js";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
 import DiceGame from "./components//Dice_Game/DiceGame";
 import Memory from "./components/Memory/Memory.js";
@@ -20,6 +20,7 @@ function App() {
           <Route path="/memory">
             <Memory />
           </Route>
+          <Redirect to="/" />
         </Switch>
       </div>
       <NavBar />
