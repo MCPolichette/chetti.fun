@@ -5,6 +5,7 @@ import "./App.css";
 import DiceGame from "./components//Dice_Game/DiceGame";
 import Memory from "./components/Memory/Memory.js";
 import NavBar from "./components/HomeAndNavigation/NavBar.js";
+import { PickNPlace } from "./components/pick-n-place/PickNPlace";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route path="/memory">
             <Memory />
+          </Route>
+          <Route path="/pick-n-place">
+            <PickNPlace />
           </Route>
           <Redirect to="/" />
         </Switch>
