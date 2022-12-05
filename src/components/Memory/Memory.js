@@ -5,17 +5,20 @@ import categories from "./cards.json"
 import Card from "./Card";
 
 
+
 const Memory = () => {
     const [game, setGame] = useState({
         number_of_pictures: 5,
         category: categories.family
     })
+    const [activeCards, setActiveCards] = useState([])
     const [cards, setCards] = useState([])
     const startgame = (e) => {
         setCards([])
         let arr = new Array();
         let cat = game.category
         for (let i = 0; i < game.number_of_pictures; i++) {
+            cat[i].status = "down"
             arr.push(cat[i]);
             arr.push(cat[i]);
         }
@@ -29,20 +32,57 @@ const Memory = () => {
         setCards(arr)
         console.log("cards randomized")
     };
+    function flipCard (indexes, newStatus){
 
-    const handleCardClick = (index) => {
         let arr = new Array()
         cards.forEach((card => {
             arr.push(card)
         }))
-        let x = { // For unknown reasons (arr[index].status = "up") does not work.  this is my work-around, creating a new object with all the same data.
-            alt: cards[index].alt,
-            id: cards[index].id,
-            img: cards[index].img,
-            status: "up"
-        }
-        arr[index] = x
+        for (let i= 0; i <indexes.length; i++){
+            console.log("is this a number?", indexes)
+        var z = { // For unknown reasons (arr[index].status = "up") does not work.  this is my work-around, creating a new object with all the same data.
+                alt: cards[indexes[i]].alt,
+                id: cards[indexes[i]].id,
+                img: cards[indexes[i]].img,
+                status: newStatus }
+        arr[indexes[i]] = z }
         setCards(arr)
+    }
+    const handleCardClick = (index) => {
+        if (cards[index].status != "match"){
+        console.log(index)
+        console.log(activeCards)
+        let z = activeCards
+            switch (activeCards.length) {
+            case 0:
+                z.push(index);
+                flipCard([index], "up")
+                console.log("0")             
+            break;
+            case 1:
+                if (index != z[0]){
+                z.push(index)
+                if (cards[(z[0])].id === cards[(z[1])].id) {
+                 flipCard([z[0], z[1]],"match");
+                 z=[];
+                    console.log("Match!", cards)
+                } else {
+                    console.log(z)
+                    console.log("NO MATCH", cards)
+                   flipCard([z[1]], "up");
+                   setTimeout(
+                   function () {
+                        flipCard([z[0],z[1]], "down")
+                        setActiveCards([])
+                    }, 1000)
+                             }
+                             
+                            }
+            break;
+        }    
+        setActiveCards(z)
+
+        }
 
     }
 

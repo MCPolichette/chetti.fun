@@ -2,56 +2,47 @@
     "family": [
         {
             "id": 1,
-            "status": "down",
-            "img": "Gianni",
+            "img": "/faces/gianni.png",
             "alt": "Gianni"
         },
         {
             "id": 2,
-            "status": "down",
-            "img": "Imogene",
+            "img": "/faces/imogene.png",
             "alt": "Imogene"
         },
         {
             "id": 3,
-            "status": "down",
-            "img": "Emily",
-            "alt": "Emily"
+            "img": "/faces/emily.png",
+            "alt": "Mom"
         },
         {
             "id": 4,
-            "status": "down",
-            "img": "Mark",
-            "alt": "Mark"
+            "img": "/faces/mark.png",
+            "alt": "Dad"
         },
         {
             "id": 5,
-            "status": "down",
-            "img": "Kangaroo",
+            "img": "/faces/kangaroo.png",
             "alt": "Kangaroo"
         },
         {
             "id": 6,
-            "status": "down",
-            "img": "Grammy",
+            "img": "/faces/grammy.png",
             "alt": "Grammy"
         },
         {
             "id": 7,
-            "status": "down",
-            "img": "Grandma",
+            "img": "/faces/grandma.png",
             "alt": "Grandma"
         },
         {
             "id": 8,
-            "status": "down",
-            "img": "Grandpa",
+            "img": "/faces/grandpa.png",
             "alt": "Grandpa"
         },
         {
             "id": 9,
-            "status": "down",
-            "img": "Papa",
+            "img": "/faces/papa.png",
             "alt": "Papa"
         }
     ]
