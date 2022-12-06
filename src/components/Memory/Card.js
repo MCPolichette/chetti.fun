@@ -19,7 +19,7 @@ const Card = ({ card, handleCardClick, index }) => {
   
     return (
 
-        <div className="col-4 box" onClick={() => handleCardClick(index)} >
+        <div className=" box" onClick={() => handleCardClick(index)} >
             <div className={cardface}>
             <div className="flip-card-front"></div>
             <div className="flip-card-back" ><img src={card.img} alt={card.alt} />

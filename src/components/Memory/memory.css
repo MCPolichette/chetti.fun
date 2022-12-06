@@ -2,7 +2,7 @@ img{
     width: 100%;
 }
 .box {
-    margin: .2em;
+    margin: .5em;
     width: 6em;
     height:6em;
     perspective: 1000px;
@@ -38,8 +38,10 @@ img{
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-    background-color: #bbb;
+    background-color:rgb(177, 29, 29);
     color: black;
+    border-style: solid;
+    border-color: black;
 }
 
 /* Style the back side */
@@ -48,4 +50,8 @@ img{
     background-color: rgb(101, 255, 30);
     color: rgb(0, 0, 0);
     transform: rotateY(180deg);
+    box-shadow: "0 0 50px #76ff03";
+            width: 40;
+            height: 40;
+                  animation: "bounce 1s infinite"
 }

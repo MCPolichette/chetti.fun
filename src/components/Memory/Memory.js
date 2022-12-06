@@ -1,19 +1,57 @@
-import React, { useRef } from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./memory.css"
 import categories from "./cards.json"
 import Card from "./Card";
-
-
+import UIfx from 'uifx';
+import win_snd from '../../site_sounds/456966__funwithsound__success-fanfare-trumpets.mp3';
+import success_snd from '../../site_sounds/318968__djm62__successarpeggio.flac';
+import error_snd from '../../site_sounds/419023__jacco18__acess-denied-buzz.mp3';
 
 const Memory = () => {
-    const [game, setGame] = useState({
-        number_of_pictures: 5,
+     const success_sound = new UIfx(success_snd);
+    const error_sound = new UIfx(error_snd);
+    const win_sound = new UIfx(win_snd);
+    const [start_button, startGameDisplay] = useState({
+        position: "fixed",
+        width: "100vw",
+        height: "100%",
+        left: 0,
+        opacity: .8,
+        textShadow: "4px 4px black",
+        fontSize: "300%",
+        animation: "bounce 4s infinite"})
+    const [game, setGame] = useState({ 
+        number_of_pictures: 6,
         category: categories.family
     })
+    const [score, setScore] = useState(0)
     const [activeCards, setActiveCards] = useState([])
     const [cards, setCards] = useState([])
+
+  useEffect(() => {
+    if (score === game.number_of_pictures){
+        win_sound.play();
+        setScore(0)
+        startgame()
+        startGameDisplay({
+        position: "fixed",
+        width: "100vw",
+        height: "100%",
+        left: 0,
+        opacity: .8,
+        textShadow: "4px 4px black",
+        fontSize: "300%",
+        zIndex:10,
+        animation: "bounce 4s infinite"})
+    }      }  , [score])
+    const newGame = (e) => {
+    
+    startGameDisplay({})
+}
+
     const startgame = (e) => {
+        setScore(0)
+        newGame()
         setCards([])
         let arr = new Array();
         let cat = game.category
@@ -33,13 +71,11 @@ const Memory = () => {
         console.log("cards randomized")
     };
     function flipCard (indexes, newStatus){
-
         let arr = new Array()
         cards.forEach((card => {
             arr.push(card)
         }))
         for (let i= 0; i <indexes.length; i++){
-            console.log("is this a number?", indexes)
         var z = { // For unknown reasons (arr[index].status = "up") does not work.  this is my work-around, creating a new object with all the same data.
                 alt: cards[indexes[i]].alt,
                 id: cards[indexes[i]].id,
@@ -50,22 +86,21 @@ const Memory = () => {
     }
     const handleCardClick = (index) => {
         if (cards[index].status != "match"){
-        console.log(index)
-        console.log(activeCards)
         let z = activeCards
             switch (activeCards.length) {
             case 0:
                 z.push(index);
-                flipCard([index], "up")
-                console.log("0")             
+                flipCard([index], "up")           
             break;
             case 1:
                 if (index != z[0]){
                 z.push(index)
                 if (cards[(z[0])].id === cards[(z[1])].id) {
                  flipCard([z[0], z[1]],"match");
+                 setScore(score +1)
+                 success_sound.play()
                  z=[];
-                    console.log("Match!", cards)
+
                 } else {
                     console.log(z)
                     console.log("NO MATCH", cards)
@@ -74,6 +109,7 @@ const Memory = () => {
                    function () {
                         flipCard([z[0],z[1]], "down")
                         setActiveCards([])
+                        error_sound.play()
                     }, 1000)
                              }
                              
@@ -82,6 +118,8 @@ const Memory = () => {
         }    
         setActiveCards(z)
 
+        }else{
+            error_sound.play()
         }
 
     }
@@ -90,9 +128,8 @@ const Memory = () => {
 
     return (
         <div className="container gameBox">
+             <button className="btn justify-content-center btn-primary"style={start_button} onClick={startgame}> START GAME</button>
             <h1>Memory Game</h1>
-
-            <button onClick={startgame}> START GAME</button>
             <hr></hr>
             <div className="row justify-content-center">
                 {cards.map((card, index) => (
