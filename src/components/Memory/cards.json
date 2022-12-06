@@ -1,49 +1,52 @@
 {
-    "family": [
-        {
-            "id": 1,
-            "img": "/faces/gianni.png",
-            "alt": "Gianni"
-        },
-        {
-            "id": 2,
-            "img": "/faces/imogene.png",
-            "alt": "Imogene"
-        },
-        {
-            "id": 3,
-            "img": "/faces/emily.png",
-            "alt": "Mom"
-        },
-        {
-            "id": 4,
-            "img": "/faces/mark.png",
-            "alt": "Dad"
-        },
-        {
-            "id": 5,
-            "img": "/faces/kangaroo.png",
-            "alt": "Kangaroo"
-        },
-        {
-            "id": 6,
-            "img": "/faces/walter.png",
-            "alt": "Walter"
-        },
-        {
-            "id": 7,
-            "img": "/faces/grandma.png",
-            "alt": "Grandma"
-        },
-        {
-            "id": 8,
-            "img": "/faces/grandpa.png",
-            "alt": "Grandpa"
-        },
-        {
-            "id": 9,
-            "img": "/faces/papa.png",
-            "alt": "Papa"
-        }
-    ]
+	"family": [
+		{
+			"id": 1,
+			"img": "/faces/gianni.png",
+			"alt": "Gianni"
+		},
+		{
+			"id": 2,
+			"img": "/faces/imogene.png",
+			"alt": "Imogene"
+		},
+		{
+			"id": 3,
+			"img": "/faces/emily.png",
+			"alt": "Mom"
+		},
+		{
+			"id": 4,
+			"img": "/faces/mark.png",
+			"alt": "Dad"
+		},
+		{
+			"id": 5,
+			"img": "/faces/kangaroo.png",
+			"alt": "Kangaroo"
+		},
+		{
+			"id": 6,
+			"img": "/faces/walter.png",
+			"alt": "Walter"
+		}
+	],
+	"extended-family": [
+		{ "id": 10, "name": "grammy", "img:": "faces/grammy" },
+		{
+			"id": 7,
+			"img": "/faces/grandma.png",
+			"alt": "Grandma"
+		},
+		{
+			"id": 8,
+			"img": "/faces/grandpa.png",
+			"alt": "Grandpa"
+		},
+		{
+			"id": 9,
+			"img": "/faces/papa.png",
+			"alt": "Papa"
+		}
+	]
 }
