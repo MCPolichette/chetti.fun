@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "d13badf9abf5ba862f71",
-    "url": "/static/css/main.8e331114.chunk.css"
+    "revision": "8054fba36f661af6dff3",
+    "url": "/static/css/main.b47ccc13.chunk.css"
   },
   {
-    "revision": "d13badf9abf5ba862f71",
-    "url": "/static/js/main.d13badf9.chunk.js"
+    "revision": "8054fba36f661af6dff3",
+    "url": "/static/js/main.8054fba3.chunk.js"
   },
   {
-    "revision": "6f5b8e106d952e2c8feb",
-    "url": "/static/js/1.6f5b8e10.chunk.js"
+    "revision": "4a3817ad688c84be15fc",
+    "url": "/static/js/1.4a3817ad.chunk.js"
   },
   {
-    "revision": "fbddae2006519ea7b644",
-    "url": "/static/js/2.fbddae20.chunk.js"
+    "revision": "60994526bdfabdd319f7",
+    "url": "/static/js/2.60994526.chunk.js"
   },
   {
-    "revision": "c167c87a250c2f298be1",
-    "url": "/static/js/runtime~main.c167c87a.js"
+    "revision": "513e7a7851db49f89fc7",
+    "url": "/static/js/runtime~main.513e7a78.js"
   },
   {
     "revision": "5acc4c358abe356ab34cb46990213c87",
@@ -48,11 +48,7 @@ self.__precacheManifest = [
     "url": "/static/media/pramod-tiwari-3UgbE1b43j8-unsplash.7bd4b931.jpg"
   },
   {
-    "revision": "451ee05dac3f16c934e07898e53033ce",
-    "url": "/static/media/dice.451ee05d.png"
-  },
-  {
-    "revision": "8d10942eb38d70edcecfbd91a0cb9cf3",
+    "revision": "7ff08d4f7b4007fc56c18650d5360a06",
     "url": "/index.html"
   }
 ];
