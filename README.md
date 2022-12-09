@@ -44,6 +44,8 @@ Sounds Used
 
 <!-- animations: - https://animate.style/ -->
 
+icons supplied from: https://www.reshot.com/free-svg-icons
+
 Dinosaur Images supplied by <a href="https://www.vecteezy.com/free-vector/cartoon">Cartoon Vectors by Vecteezy</a>
 Animal Images supplied by <a href="https://www.vecteezy.com/free-vector/cartoon-animals">Cartoon Animals Vectors by Vecteezy</a>
 

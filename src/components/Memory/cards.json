@@ -1,52 +1,40 @@
 {
-	"family": [
+	"list": [
 		{
-			"id": 1,
-			"img": "/faces/gianni.png",
-			"alt": "Gianni"
+			"category": "Family",
+			"icon": "fa-solid fa-user",
+			"images": [
+				{ "img": "/faces/gianni.png", "alt": "Gianni" },
+				{ "img": "/faces/imogene.png", "alt": "Imogene" },
+				{ "img": "/faces/emily.jpg", "alt": "Mom" },
+				{ "img": "/faces/mark.png", "alt": "Dad" },
+				{ "img": "/faces/kangaroo.png", "alt": "Kangaroo" },
+				{ "img": "/faces/walter.png", "alt": "Walter" }
+			]
 		},
 		{
-			"id": 2,
-			"img": "/faces/imogene.png",
-			"alt": "Imogene"
+			"category": "Dinosaurs",
+			"icon": "fa-solid fa-dragon",
+			"images": [
+				{ "img": "/dinosaurs/raptor_green.jpg", "alt": "raptor" },
+				{ "img": "/dinosaurs/parasaur_purple.jpg", "alt": "parasaur" },
+				{ "img": "/dinosaurs/spino_yellow.jpg", "alt": "spino" },
+				{ "img": "/dinosaurs/stego_red.jpg", "alt": "stego" },
+				{ "img": "/dinosaurs/trex_teal.jpg", "alt": "t-rex" },
+				{ "img": "/dinosaurs/ptero_pink.jpg", "alt": "ptero" }
+			]
 		},
 		{
-			"id": 3,
-			"img": "/faces/emily.png",
-			"alt": "Mom"
-		},
-		{
-			"id": 4,
-			"img": "/faces/mark.png",
-			"alt": "Dad"
-		},
-		{
-			"id": 5,
-			"img": "/faces/kangaroo.png",
-			"alt": "Kangaroo"
-		},
-		{
-			"id": 6,
-			"img": "/faces/walter.png",
-			"alt": "Walter"
-		}
-	],
-	"extended-family": [
-		{ "id": 10, "name": "grammy", "img:": "faces/grammy" },
-		{
-			"id": 7,
-			"img": "/faces/grandma.png",
-			"alt": "Grandma"
-		},
-		{
-			"id": 8,
-			"img": "/faces/grandpa.png",
-			"alt": "Grandpa"
-		},
-		{
-			"id": 9,
-			"img": "/faces/papa.png",
-			"alt": "Papa"
+			"category": "Eggs",
+			"icon": "fa-solid fa-egg",
+			"images": [
+				{ "img": "/dinoEggs/egg1.jpg", "alt": "EGG" },
+				{ "img": "/dinoEggs/egg2.jpg", "alt": "EGG" },
+				{ "img": "/dinoEggs/egg3.jpg", "alt": "EGG" },
+				{ "img": "/dinoEggs/egg4.jpg", "alt": "EGG" },
+				{ "img": "/dinoEggs/egg5.jpg", "alt": "EGG" },
+				{ "img": "/dinoEggs/egg6.jpg", "alt": "EGG" }
+			]
 		}
 	]
 }
