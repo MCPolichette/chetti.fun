@@ -34,7 +34,7 @@ const DiceGame = () => {
 		{ number: 11 },
 		{ number: 12 },
 	]);
-	const maxScore = 5;
+	const maxScore = 4;
 	const [score, setScore] = useState(0);
 	const [diceValues, setDice] = useState([0, 0]);
 	const [total, setTotal] = useState(0);

@@ -5,7 +5,6 @@ import {
 	Button,
 	Row,
 	Col,
-	ButtonGroup,
 	ToggleButton,
 } from "react-bootstrap";
 import "./memory.css";
@@ -97,7 +96,7 @@ const Memory = () => {
 				startGameDisplay({
 					position: "fixed",
 					width: "100vw",
-					height: "110%",
+					height: "100%",
 					left: 0,
 					textShadow: "4px 4px black",
 					fontSize: "300%",
@@ -189,46 +188,50 @@ const Memory = () => {
 	};
 
 	return (
-		<Container className=" gameBox">
+		<Container fluid="xs" className=" gameBox">
 			<div style={start_button}>
-				<Col
-					md={4}
-					className="d-grid gap-2"
-					style={{
-						width: "100%",
-						margin: 0,
-						position: "absolute",
-						top: "50%",
-					}}
-				>
-					<Button
-						size="lg"
-						className="btn justify-content-center btn-primary"
-						onClick={startgame}
+				<Row className="justify-content-center">
+					<Col
+						md={3}
+						className="d-grid gap-2"
+						style={{
+							width: "100%",
+							margin: 0,
+							position: "absolute",
+							top: "50%",
+						}}
 					>
-						START GAME
-					</Button>
-					<OptionsModal
-						title="Memory Options"
-						currentSettings={game}
-						saveOptions={setGame}
-						options={memory_options}
-						setRadioValue={setRadioValue}
-					/>
-				</Col>
+						<Button
+							size="lg"
+							className="btn justify-content-center btn-primary"
+							onClick={startgame}
+						>
+							START GAME
+						</Button>
+						<OptionsModal
+							title="Memory Options"
+							currentSettings={game}
+							saveOptions={setGame}
+							options={memory_options}
+							setRadioValue={setRadioValue}
+						/>
+					</Col>
+				</Row>
 			</div>
 			<h1>Memory Game </h1>
 			<hr></hr>
-			<Row className="justify-content-md-center">
-				{cards.map((card, index) => (
-					<Card
-						key={index}
-						card={card}
-						index={index}
-						handleCardClick={handleCardClick}
-					/>
-				))}
-			</Row>
+			<Container>
+				<Row className="justify-content-center">
+					{cards.map((card, index) => (
+						<Card
+							key={index}
+							card={card}
+							index={index}
+							handleCardClick={handleCardClick}
+						/>
+					))}
+				</Row>
+			</Container>
 		</Container>
 	);
 };
