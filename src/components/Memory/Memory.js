@@ -4,6 +4,7 @@ import {
 	Form,
 	Button,
 	Row,
+	Col,
 	ButtonGroup,
 	ToggleButton,
 } from "react-bootstrap";
@@ -25,10 +26,10 @@ const Memory = () => {
 		width: "100vw",
 		height: "100%",
 		left: 0,
-		opacity: 0.8,
 		textShadow: "4px 4px black",
 		fontSize: "300%",
 		animation: "bounce 4s infinite",
+		backgroundColor: "rgba(8,51,181, 0.6)",
 		zIndex: 10,
 	});
 
@@ -70,7 +71,7 @@ const Memory = () => {
 
 	const memory_options = (
 		<Form>
-			<ButtonGroup className="mb-2">
+			<div className="d-grid gap-2">
 				{listed_categories.map((category, index) => (
 					<ToggleButton
 						key={index}
@@ -83,30 +84,32 @@ const Memory = () => {
 						{iconTag(category.icon, category.category)}
 					</ToggleButton>
 				))}
-			</ButtonGroup>
+			</div>
 		</Form>
 	);
 
 	useEffect(() => {
 		if (score === game.number_of_pictures) {
 			win_sound.play();
-			setScore(0);
-			startgame();
-			startGameDisplay({
-				position: "fixed",
-				width: "100vw",
-				height: "100%",
-				left: 0,
-				opacity: 0.8,
-				textShadow: "4px 4px black",
-				fontSize: "300%",
-				zIndex: 10,
-				animation: "bounce 4s infinite",
-			});
+			setTimeout(function() {
+				setScore(0);
+				startgame();
+				startGameDisplay({
+					position: "fixed",
+					width: "100vw",
+					height: "110%",
+					left: 0,
+					textShadow: "4px 4px black",
+					fontSize: "300%",
+					zIndex: 10,
+					animation: "bounce 4s infinite",
+					backgroundColor: "rgba(8,51,181, 0.6)",
+				});
+			}, 1500);
 		}
 	}, [score]);
 	const newGame = (e) => {
-		startGameDisplay({});
+		startGameDisplay({ visibility: "hidden" });
 	};
 
 	const startgame = (e) => {
@@ -187,13 +190,33 @@ const Memory = () => {
 
 	return (
 		<Container className=" gameBox">
-			<Button
-				className="btn justify-content-center btn-primary"
-				style={start_button}
-				onClick={startgame}
-			>
-				START GAME
-			</Button>
+			<div style={start_button}>
+				<Col
+					md={4}
+					className="d-grid gap-2"
+					style={{
+						width: "100%",
+						margin: 0,
+						position: "absolute",
+						top: "50%",
+					}}
+				>
+					<Button
+						size="lg"
+						className="btn justify-content-center btn-primary"
+						onClick={startgame}
+					>
+						START GAME
+					</Button>
+					<OptionsModal
+						title="Memory Options"
+						currentSettings={game}
+						saveOptions={setGame}
+						options={memory_options}
+						setRadioValue={setRadioValue}
+					/>
+				</Col>
+			</div>
 			<h1>Memory Game </h1>
 			<hr></hr>
 			<Row className="justify-content-md-center">
@@ -206,13 +229,6 @@ const Memory = () => {
 					/>
 				))}
 			</Row>
-			<OptionsModal
-				title="Memory Options"
-				currentSettings={game}
-				saveOptions={setGame}
-				options={memory_options}
-				setRadioValue={setRadioValue}
-			/>
 		</Container>
 	);
 };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Modal, Form } from "react-bootstrap";
+import { Button, Modal, Row } from "react-bootstrap";
 
 function OptionModal({ options, title, currentSettings, saveOptions }) {
 	const [show, setShow] = useState(false);
@@ -26,12 +26,14 @@ function OptionModal({ options, title, currentSettings, saveOptions }) {
 				<Modal.Header closeButton>
 					<Modal.Title>{title} </Modal.Title>
 				</Modal.Header>
-				<Modal.Body>{options}</Modal.Body>
+				<Modal.Body>
+					<Row>{options}</Row>
+				</Modal.Body>
 				<Modal.Footer>
 					<Button variant="secondary" onClick={handleClose}>
 						Close
 					</Button>
-					<Button variant="primary">SAVE</Button>
+					{/* <Button variant="primary">SAVE</Button> */}
 				</Modal.Footer>
 			</Modal>
 		</>
