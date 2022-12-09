@@ -8,6 +8,7 @@ img{
     height:6em;
     perspective: 1000px;
 }
+.btn-primary {text-shadow: 2px 2px black}
 
 
 /* This container is needed to position the front and back side */
