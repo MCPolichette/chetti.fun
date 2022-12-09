@@ -1,7 +1,7 @@
 {
   "main.css": "/static/css/main.b47ccc13.chunk.css",
-  "main.js": "/static/js/main.8054fba3.chunk.js",
-  "main.js.map": "/static/js/main.8054fba3.chunk.js.map",
+  "main.js": "/static/js/main.0bd200a4.chunk.js",
+  "main.js.map": "/static/js/main.0bd200a4.chunk.js.map",
   "static/js/1.4a3817ad.chunk.js": "/static/js/1.4a3817ad.chunk.js",
   "static/js/1.4a3817ad.chunk.js.map": "/static/js/1.4a3817ad.chunk.js.map",
   "static/js/2.60994526.chunk.js": "/static/js/2.60994526.chunk.js",
@@ -17,6 +17,6 @@
   "static/media/index.css": "/static/media/pramod-tiwari-3UgbE1b43j8-unsplash.7bd4b931.jpg",
   "static/css/main.b47ccc13.chunk.css.map": "/static/css/main.b47ccc13.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.26066065e0343086b9e1baab0536f983.js": "/precache-manifest.26066065e0343086b9e1baab0536f983.js",
+  "precache-manifest.1087fea5ebb91b8b1ea0f645d2290069.js": "/precache-manifest.1087fea5ebb91b8b1ea0f645d2290069.js",
   "service-worker.js": "/service-worker.js"
 }
