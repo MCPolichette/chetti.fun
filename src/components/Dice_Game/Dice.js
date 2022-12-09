@@ -66,7 +66,7 @@ const Dice = ({ diceValue, size }) => {
 	}, [diceValue]);
 
 	return (
-		<Col md={6} style={{ marginTop: 45 }}>
+		<Col xs={6} style={{ marginTop: 45 }}>
 			<div className="panel">
 				<div className="dice" style={{ transform: diceDisplay }}>
 					<div className="side one">
