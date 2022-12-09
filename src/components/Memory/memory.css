@@ -1,5 +1,6 @@
 img{
-    width: 100%;
+    max-width: 100%;
+    max-height: 80%;
 }
 .box {
     margin: .5em;
@@ -36,6 +37,7 @@ img{
     backface-visibility: hidden;
 }
 
+
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
     background-color:rgb(177, 29, 29);
@@ -47,7 +49,7 @@ img{
 /* Style the back side */
 .flip-card-back {
     width: 100%;
-    background-color: rgb(101, 255, 30);
+    background-color: rgb(222, 244, 212);
     color: rgb(0, 0, 0);
     transform: rotateY(180deg);
     box-shadow: "0 0 50px #76ff03";

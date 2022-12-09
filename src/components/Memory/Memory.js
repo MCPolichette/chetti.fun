@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from "react";
+import {
+	Container,
+	Form,
+	Button,
+	Row,
+	ButtonGroup,
+	ToggleButton,
+} from "react-bootstrap";
 import "./memory.css";
 import categories from "./cards.json";
 import Card from "./Card";
 import UIfx from "uifx";
+import OptionsModal from "../HomeAndNavigation/OptionModal";
 import win_snd from "../../site_sounds/456966__funwithsound__success-fanfare-trumpets.mp3";
 import success_snd from "../../site_sounds/318968__djm62__successarpeggio.flac";
 import error_snd from "../../site_sounds/419023__jacco18__acess-denied-buzz.mp3";
@@ -20,14 +29,63 @@ const Memory = () => {
 		textShadow: "4px 4px black",
 		fontSize: "300%",
 		animation: "bounce 4s infinite",
+		zIndex: 10,
 	});
+
+	const listed_categories = categories.list;
 	const [game, setGame] = useState({
 		number_of_pictures: 6,
-		category: categories.family,
+		category: listed_categories[0].images,
 	});
 	const [score, setScore] = useState(0);
 	const [activeCards, setActiveCards] = useState([]);
 	const [cards, setCards] = useState([]);
+	function iconTag(iconreference, text) {
+		return (
+			<h2>
+				<i className={iconreference} /> -{text}
+			</h2>
+		);
+	}
+	const test = (e) => {
+		console.log(e);
+		setRadioValue(e.index);
+		let i = e.index;
+		setGame({
+			number_of_pictures: 6,
+			category: listed_categories[i].images,
+		});
+	};
+
+	function radioCheck(value) {
+		console.log(radioValue);
+		if (value.index === radioValue) {
+			return "primary";
+		} else {
+			return "secondary";
+		}
+	}
+
+	const [radioValue, setRadioValue] = useState("0");
+
+	const memory_options = (
+		<Form>
+			<ButtonGroup className="mb-2">
+				{listed_categories.map((category, index) => (
+					<ToggleButton
+						key={index}
+						id={index}
+						type="checkbox"
+						variant={radioCheck({ index })}
+						value={index}
+						onChange={(e) => test({ index })}
+					>
+						{iconTag(category.icon, category.category)}
+					</ToggleButton>
+				))}
+			</ButtonGroup>
+		</Form>
+	);
 
 	useEffect(() => {
 		if (score === game.number_of_pictures) {
@@ -57,10 +115,13 @@ const Memory = () => {
 		setCards([]);
 		let arr = new Array();
 		let cat = game.category;
+		var id = 0;
 		for (let i = 0; i < game.number_of_pictures; i++) {
 			cat[i].status = "down";
+			cat[i].id = id;
 			arr.push(cat[i]);
 			arr.push(cat[i]);
+			id = id + 1;
 		}
 		console.log(arr);
 		for (let i = arr.length - 1; i > 0; i--) {
@@ -125,18 +186,17 @@ const Memory = () => {
 	};
 
 	return (
-		<div className="container gameBox">
-			<button
+		<Container className=" gameBox">
+			<Button
 				className="btn justify-content-center btn-primary"
 				style={start_button}
 				onClick={startgame}
 			>
-				{" "}
 				START GAME
-			</button>
-			<h1>Memory Game</h1>
+			</Button>
+			<h1>Memory Game </h1>
 			<hr></hr>
-			<div className="row justify-content-center">
+			<Row className="justify-content-md-center">
 				{cards.map((card, index) => (
 					<Card
 						key={index}
@@ -145,8 +205,15 @@ const Memory = () => {
 						handleCardClick={handleCardClick}
 					/>
 				))}
-			</div>
-		</div>
+			</Row>
+			<OptionsModal
+				title="Memory Options"
+				currentSettings={game}
+				saveOptions={setGame}
+				options={memory_options}
+				setRadioValue={setRadioValue}
+			/>
+		</Container>
 	);
 };
 
