@@ -9,7 +9,7 @@ const Coins = ({ score }) => {
 			break;
 		default:
 			for (let i = 0; i < score; i++) {
-				coinArr.push({ i });
+				coinArr.push("coin" + i);
 			}
 			break;
 	}
@@ -17,7 +17,7 @@ const Coins = ({ score }) => {
 		<Row className="justify-content-center" style={{ height: 60 }}>
 			{coinArr.map(({ coin, index }) => (
 				<div
-					key={index}
+					key={coin}
 					className="col-1 rounded-circle"
 					style={{
 						color: "black",

@@ -11,10 +11,22 @@ body {
   margin: 0;
   /* font-family: 'Lilita One', cursive; */
   font-family: 'Fredoka One', cursive;
-  color: white
+  color: white;
+}
+.startBtn{
+  /* height: 8em; */
+  font-size:100%
+  
 }
 
-
+.gameText{
+    color:white;
+    margin:.5em;
+    text-shadow: 4px 4px 2px black; 
+}
+a:link {
+    text-decoration: none;
+}
 
 .hidden {
   opacity: 0

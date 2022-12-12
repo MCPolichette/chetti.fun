@@ -17,20 +17,20 @@ function OptionModal({ options, title, currentSettings, saveOptions }) {
 				style={{ color: "black" }}
 				show={show}
 				onHide={handleClose}
-				backdrop="static"
 				keyboard={false}
-				size="lg"
+				size="sm"
 				aria-labelledby="contained-modal-title-vcenter"
 				centered
+				variant="primary"
 			>
-				<Modal.Header closeButton>
+				<Modal.Header style={{ backgroundColor: "lightskyblue" }} closeButton>
 					<Modal.Title>{title} </Modal.Title>
 				</Modal.Header>
-				<Modal.Body>
+				<Modal.Body style={{ backgroundColor: "lightskyblue" }}>
 					<Row>{options}</Row>
 				</Modal.Body>
-				<Modal.Footer>
-					<Button variant="secondary" onClick={handleClose}>
+				<Modal.Footer style={{ backgroundColor: "lightskyblue" }}>
+					<Button size="lg" variant="success" onClick={handleClose}>
 						Close
 					</Button>
 					{/* <Button variant="primary">SAVE</Button> */}

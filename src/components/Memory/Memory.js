@@ -12,6 +12,7 @@ import categories from "./cards.json";
 import Card from "./Card";
 import UIfx from "uifx";
 import OptionsModal from "../HomeAndNavigation/OptionModal";
+// import StartButton from "../HomeAndNavigation/StartButton";
 import win_snd from "../../site_sounds/456966__funwithsound__success-fanfare-trumpets.mp3";
 import success_snd from "../../site_sounds/318968__djm62__successarpeggio.flac";
 import error_snd from "../../site_sounds/419023__jacco18__acess-denied-buzz.mp3";
@@ -31,7 +32,6 @@ const Memory = () => {
 		backgroundColor: "rgba(8,51,181, 0.6)",
 		zIndex: 10,
 	});
-
 	const listed_categories = categories.list;
 	const [game, setGame] = useState({
 		number_of_pictures: 6,
@@ -40,10 +40,10 @@ const Memory = () => {
 	const [score, setScore] = useState(0);
 	const [activeCards, setActiveCards] = useState([]);
 	const [cards, setCards] = useState([]);
-	function iconTag(iconreference, text) {
+	function iconTag(iconReference, text) {
 		return (
 			<h2>
-				<i className={iconreference} /> -{text}
+				<i className={iconReference} /> -{text}
 			</h2>
 		);
 	}
@@ -85,6 +85,15 @@ const Memory = () => {
 				))}
 			</div>
 		</Form>
+	);
+	const optionbutton = (
+		<OptionsModal
+			title="Memory Options"
+			currentSettings={game}
+			saveOptions={setGame}
+			options={memory_options}
+			setRadioValue={setRadioValue}
+		/>
 	);
 
 	useEffect(() => {
@@ -153,7 +162,7 @@ const Memory = () => {
 		setCards(arr);
 	}
 	const handleCardClick = (index) => {
-		if (cards[index].status != "match") {
+		if (cards[index].status !== "match") {
 			let z = activeCards;
 			switch (activeCards.length) {
 				case 0:
@@ -161,7 +170,7 @@ const Memory = () => {
 					flipCard([index], "up");
 					break;
 				case 1:
-					if (index != z[0]) {
+					if (index !== z[0]) {
 						z.push(index);
 						if (cards[z[0]].id === cards[z[1]].id) {
 							flipCard([z[0], z[1]], "match");
@@ -203,7 +212,7 @@ const Memory = () => {
 					>
 						<Button
 							size="lg"
-							className="btn justify-content-center btn-primary"
+							className="btn startBtn justify-content-center btn-primary"
 							onClick={startgame}
 						>
 							START GAME

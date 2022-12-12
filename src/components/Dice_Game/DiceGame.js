@@ -132,7 +132,7 @@ const DiceGame = () => {
 	};
 
 	return (
-		<Container className=" gamectr">
+		<Container className=" gamectr gameText">
 			<Button variant="primary" onClick={testRoll} style={start_button}>
 				ROLL DICE !
 			</Button>
@@ -155,7 +155,7 @@ const DiceGame = () => {
 										value={number}
 										variant=" btn-success"
 										size="lg"
-										className="diceBtn"
+										className="diceBtn gameText"
 										onClick={numberClick}
 									>
 										{number}
