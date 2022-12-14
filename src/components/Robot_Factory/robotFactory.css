@@ -1,0 +1,34 @@
+.factory{
+    border-style: groove;
+    border-color: rgb(199, 199, 192);
+    border-width: .3em;
+    min-height: 400px;
+    box-shadow: inset -2em 2em 2em black;
+    max-width: 90%;
+    background-image: url("/krzysztof-kowalik-djdoRnnKLyo-unsplash.jpg");
+    background-size: cover;
+    background-position: 50%;
+   
+}
+.robotBlock{
+    /* For testing */
+    border-style: dashed;
+    border-color:greenyellow;
+    border-width: 4px;
+
+}
+.robotHead {        
+    -webkit-mask-image: url(/robotParts/circle-head.svg);
+            mask-image: url(/robotParts/circle-head.svg);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            background-color: "blue";
+}
+.robotBody{
+    -webkit-mask-image: url(/robotParts/sq-body-vector.svg);
+    mask-image: url(/robotParts/sq-body-vector.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background-color: "pink",
+
+}

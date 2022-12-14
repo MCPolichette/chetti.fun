@@ -21,6 +21,11 @@ const Home = () => {
 			link: "/pick-n-place",
 			icon: "fa-solid fa-arrows-to-circle",
 		},
+		{
+			title: "Robot Factory",
+			link: "/robot_factory",
+			icon: "fa-solid fa-robot",
+		},
 	];
 	return (
 		<Container>

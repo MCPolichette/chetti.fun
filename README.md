@@ -27,6 +27,8 @@ This project is built arround the idea of building a fun little web app for my 3
 
 BackGround Photo by <a href="https://unsplash.com/es/@pramodtiwari?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pramod Tiwari</a> on <a href="https://unsplash.com/t/experimental?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
+Factory Photo by <a href="https://unsplash.com/@kowalikus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Krzysztof Kowalik</a> on <a href="https://unsplash.com/collections/3135453/factory?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
 <hr>
 Sounds Used
 

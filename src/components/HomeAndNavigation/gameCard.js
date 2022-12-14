@@ -6,7 +6,7 @@ const GameCard = ({ title, icon, creator }) => {
 	return (
 		<Card bg="success" className="gameText">
 			<Card.Header>
-				<h4>{title}</h4>
+				<h6>{title}</h6>
 			</Card.Header>
 			<Card.Body>
 				<blockquote className="blockquote mb-0">
