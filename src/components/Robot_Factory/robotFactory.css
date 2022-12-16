@@ -8,8 +8,8 @@
     background-image: url("/krzysztof-kowalik-djdoRnnKLyo-unsplash.jpg");
     background-size: cover;
     background-position: 50%;
-   
 }
+
 .robotBlock{
     /* For testing */
     border-style: dashed;
@@ -17,18 +17,89 @@
     border-width: 4px;
 
 }
-.robotHead {        
-    -webkit-mask-image: url(/robotParts/circle-head.svg);
-            mask-image: url(/robotParts/circle-head.svg);
-            -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-            background-color: "blue";
+.roboContainer{
+    width: 200px;
+    height: 300px;
+    position: relative;
+    margin: auto;
+    margin-top: 3em;
+    
 }
-.robotBody{
-    -webkit-mask-image: url(/robotParts/sq-body-vector.svg);
-    mask-image: url(/robotParts/sq-body-vector.svg);
+.roboPosition {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    margin: auto;
+    border-color: none;
+    top: -.5em;
+    margin-top: 6em;
+}
+.headPosition{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -125px;
+    margin: auto;
+    z-index: 1;
+}
+.head{
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    bottom:010px;
+    left:0
+}
+.facePosition{
+    position: absolute;
+    width: 70px;
+    top: 40px;
+    left: 33%;
+}
+.dome-head {        
+    -webkit-mask-image: url(/robotParts/heads/dome-vector.svg);
+    mask-image: url(/robotParts/heads/dome-vector.svg);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    background-color: "pink",
-
+    position: absolute;
+}
+.sq01-head {
+    -webkit-mask-image: url(/robotParts/heads/sq01-vector.svg);
+    mask-image: url(/robotParts/heads/sq01-vector.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+ position: absolute;
+}
+.sq-body{
+    -webkit-mask-image: url(/robotParts/bodies/sq-body-vector.svg);
+    mask-image: url(/robotParts/bodies/sq-body-vector.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}.lg-body {
+    -webkit-mask-image: url(/robotParts/bodies/lg-body-vector.svg);
+    mask-image: url(/robotParts/bodies/lg-body-vector.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}.pnt-body {
+    -webkit-mask-image: url(/robotParts/bodies/pnt-body-vector.svg);
+    mask-image: url(/robotParts/bodies/pnt-body-vector.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+.trp-body {
+    -webkit-mask-image: url(/robotParts/bodies/trp-body-vector.svg);
+    mask-image: url(/robotParts/bodies/trp-body-vector.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+.bxy-body {
+    -webkit-mask-image: url(/robotParts/bodies/bxy-body-vector.svg);
+    mask-image: url(/robotParts/bodies/bxy-body-vector.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+.rnd-body {
+    -webkit-mask-image: url(/robotParts/bodies/rnd-body-vector.svg);
+    mask-image: url(/robotParts/bodies/rnd-body-vector.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
 }

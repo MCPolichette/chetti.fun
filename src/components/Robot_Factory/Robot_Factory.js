@@ -1,21 +1,45 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Button, Form } from "react-bootstrap";
 import Robot from "./Robot";
 import "./robotFactory.css";
+import Parts from "./parts.json";
 
 const Robot_Factory = () => {
-	const randomColor = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
-	const [robotColor, setRobotColor] = useState("blue");
+	function randomColor() {
+		return `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
+	}
+	const getRandom = (arr) => {
+		return arr[Math.floor(Math.random() * arr.length)];
+	};
+	const [robotColor, setRobotColor] = useState(randomColor);
 	// Change Head Function
 	// Change Body Function
 	function newColor() {
 		setRobotColor(randomColor);
 		console.log(robotColor);
 	}
+	const TEST_ROBOT = {
+		body: getRandom(Parts.bodies),
+		display: getRandom(Parts.displays),
+		head: getRandom(Parts.heads),
+		face: getRandom(Parts.faces),
+	};
 	const [thisRobot, updateRobot] = useState({
-		head: 0,
-		body: 1,
+		primary_color: robotColor,
+		secondary_color: robotColor,
+		body_shape: TEST_ROBOT.body.shape,
+		body: TEST_ROBOT.body.body,
+		display: TEST_ROBOT.display,
+		head_shape: TEST_ROBOT.head.shape,
+		head: TEST_ROBOT.head.head,
+		face: TEST_ROBOT.face,
+		arms_shape: "rnd",
+		arms: "rnd-arms-01",
+		feet_shape: "legs",
+		feet: "legs01",
+		accessories: "",
 	});
+	console.log(thisRobot);
 	return (
 		<>
 			<Container>
@@ -23,18 +47,28 @@ const Robot_Factory = () => {
 				<Row>
 					<Container className="factory ">
 						<Row className="justify-content-center">
-							<Robot color={robotColor} />
+							<Robot build={thisRobot} />
 						</Row>
 					</Container>
 				</Row>
 			</Container>
-			<Container>
+			<Container style={{ marginTop: "2em" }}>
 				<Row>
-					<Col>
-						<Button variant="primary" onClick={newColor}>
-							Color
-						</Button>
-					</Col>
+					<Button variant="primary" onClick={newColor}>
+						Color
+					</Button>
+					<Button variant="primary" onClick={newColor}>
+						Head
+					</Button>
+					<Button variant="primary" onClick={newColor}>
+						Body
+					</Button>
+					<Button variant="primary" onClick={newColor}>
+						Feet
+					</Button>
+					<Button variant="primary" onClick={newColor}>
+						Face
+					</Button>
 				</Row>
 			</Container>
 			{/* a row that contains the robot building container. (at least 3 overlapping <div>s) */}

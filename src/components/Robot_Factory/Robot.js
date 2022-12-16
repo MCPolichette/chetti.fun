@@ -1,52 +1,47 @@
 import React from "react";
 import "./robotFactory.css";
-
 // Face should be it's own element. (animated Gif.)
-//
-const Robot = (Color) => {
-	const test = { backgroundColor: Color.color };
+
+const Robot = (build) => {
+	const primaryColor = {
+		backgroundColor: build.build.primary_color,
+	};
+	const parts_list = {
+		primary_color: build.build.primary_color,
+		body_shape: build.build.body_shape,
+		body: "/robotParts/bodies/" + build.build.body,
+		head_shape: build.build.head_shape,
+		head: "robotParts/heads/" + build.build.head,
+		face: "robotParts/faces/" + build.build.face.static,
+		display: "robotParts/displays/" + build.build.display,
+	};
+	console.log(build.build);
 	return (
 		<div>
-			<h1 style={Color}>Test</h1>
-			<div
-				className="robotBlock "
+			<div //!? Remove ROBOT BLOCK to get rid of display dashes
+				className="robotBlock roboContainer "
 				style={{
-					width: "200px",
-					height: "300px",
-					position: "relative",
-					margin: "auto",
-					marginTop: "2em",
 					borderColor: "white",
 				}}
 			>
-				<div
-					className="robotBlock animate__animated animate__zoomInDown animate__slow "
-					style={{
-						width: "100%",
-						height: "50%",
-						position: "relative",
-						margin: "auto",
-						borderColor: "none",
-						top: "-.5em",
-						marginTop: "6em",
-					}}
-				>
-					<div className="robotBody" style={test}>
-						<img className="" src="/robotParts/sq-body04.png" />
+				<div className="roboPosition  ">
+					<div className={parts_list.body_shape} style={primaryColor}>
+						<img
+							style={{ width: "100%", height: "100%" }}
+							className="robotBody"
+							src={parts_list.body}
+						/>
+						<img
+							className=""
+							style={{ position: "absolute", top: "20%", left: "20%" }}
+							src={parts_list.display}
+						/>
 					</div>
-					<div
-						className="robotBlock  animate__animated animate__zoomInDown animate__slow animate__delay-2s	"
-						style={{
-							width: "100%",
-							height: "30%",
-							position: "absolute",
-							top: "-5em",
-							margin: "auto",
-							zIndex: 1,
-						}}
-					>
-						<div className="robotHead" style={test}>
-							<img className="" src="/robotParts/head01.png" />
+
+					<div className="robotBlock headPosition  	" style={{}}>
+						<div className={parts_list.head_shape} style={primaryColor}>
+							<img className="" src={parts_list.head} />
+							<img className="facePosition" src={parts_list.face} />
 						</div>
 					</div>
 					<div
@@ -73,7 +68,7 @@ const Robot = (Color) => {
 					></div>
 				</div>
 				<div
-					className="robotBlock animate__animated animate__zoomInDown animate__slow "
+					className="robotBlock  "
 					style={{
 						width: "100%",
 						height: "25%",
