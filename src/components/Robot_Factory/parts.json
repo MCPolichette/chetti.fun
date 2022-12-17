@@ -8,9 +8,10 @@
 		{ "shape": "pnt-body", "body": "pnt-body-01.png" },
 		{ "shape": "rnd01-body", "body": "rnd01-body-01.png" }
 	],
-	"displays": ["disp01.gif", "disp02.gif"],
+	"displays": ["disp01.gif", "disp02.gif", "disp03.gif", "disp04.gif"],
 	"heads": [
 		{ "shape": "dome-head", "head": "dome01.png" },
+		{ "shape": "rnd-head", "head": "rnd01.png" },
 		{ "shape": "sq01-head", "head": "sq01.png" }
 	],
 	"arms": [{ "shape": "arm01", "arm": "arm01" }],
@@ -30,6 +31,12 @@
 			"static": "face-02-static.gif",
 			"suprised": "face-02-suprised.gif",
 			"broken": "face02-broken"
+		},
+		{
+			"name": "face03",
+			"static": "face-03-static.gif",
+			"suprised": "face-03-suprised.gif",
+			"broken": "face03-broken"
 		}
 	]
 }
