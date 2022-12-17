@@ -1,0 +1,41 @@
+{
+	"bodies": [
+		{ "shape": "sq-body", "body": "sq-body-01.png" },
+		{ "shape": "lg-body", "body": "lg-body-01.png" },
+		{ "shape": "trp-body", "body": "trp-body-01.png" },
+		{ "shape": "rnd-body", "body": "rnd-body-01.png" },
+		{ "shape": "bxy-body", "body": "bxy-body-01.png" },
+		{ "shape": "pnt-body", "body": "pnt-body-01.png" },
+		{ "shape": "rnd01-body", "body": "rnd01-body-01.png" }
+	],
+	"displays": ["disp01.gif", "disp02.gif"],
+	"heads": [
+		{ "shape": "dome-head", "head": "dome01.png" },
+		{ "shape": "dome-head", "head": "dome02.png" },
+		{ "shape": "dome-head", "head": "dome03.png" },
+		{ "shape": "dome-head", "head": "dome04.png" },
+		{ "shape": "sq01-head", "head": "sq01.png" },
+		{ "shape": "sq01-head", "head": "sq02.png" },
+		{ "shape": "sq01-head", "head": "sq03.png" },
+		{ "shape": "sq01-head", "head": "sq04.png" }
+	],
+	"arms": [{ "shape": "arm01", "arm": "arm01" }],
+	"feet": [
+		{ "shape": "legs", "arm": "legs-01" },
+		{ "shape": "legs", "arm": "legs-02" }
+	],
+	"faces": [
+		{
+			"name": "face01",
+			"static": "face-01-static.gif",
+			"suprised": "face-01-suprised.gif",
+			"broken": "face01-broken"
+		},
+		{
+			"name": "face02",
+			"static": "face-02-static.gif",
+			"suprised": "face-02-suprised.gif",
+			"broken": "face02-broken"
+		}
+	]
+}

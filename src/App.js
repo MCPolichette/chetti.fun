@@ -3,6 +3,7 @@ import Home from "./components/HomeAndNavigation/Home.js";
 import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
 import DiceGame from "./components//Dice_Game/DiceGame";
+import Robot_Factory from "./components/Robot_Factory/Robot_Factory.js";
 import Memory from "./components/Memory/Memory.js";
 import NavMenu from "./components/HomeAndNavigation/NavMenu.js";
 import { PickNPlace } from "./components/pick-n-place/PickNPlace";
@@ -23,6 +24,9 @@ function App() {
 					</Route>
 					<Route path="/pick-n-place">
 						<PickNPlace />
+					</Route>
+					<Route path="/robot_factory">
+						<Robot_Factory />
 					</Route>
 					<Redirect to="/" />
 				</Switch>
