@@ -12,18 +12,32 @@ const Robot_Factory = () => {
 		return arr[Math.floor(Math.random() * arr.length)];
 	};
 	const [robotColor, setRobotColor] = useState(randomColor);
-	// Change Head Function
-	// Change Body Function
 	function newColor() {
 		setRobotColor(randomColor);
 		console.log(robotColor);
 	}
 	const TEST_ROBOT = {
+		primary_color: randomColor(),
+		secondary_color: randomColor(),
 		body: getRandom(Parts.bodies),
 		display: getRandom(Parts.displays),
 		head: getRandom(Parts.heads),
 		face: getRandom(Parts.faces),
 	};
+	function newRobot() {
+		let newBuild = {
+			primary_color: robotColor,
+			secondary_color: robotColor,
+			body_shape: TEST_ROBOT.body.shape,
+			body: TEST_ROBOT.body.body,
+			display: TEST_ROBOT.display,
+			head_shape: TEST_ROBOT.head.shape,
+			head: TEST_ROBOT.head.head,
+			face: TEST_ROBOT.face,
+		};
+
+		updateRobot(newBuild);
+	}
 	const [thisRobot, updateRobot] = useState({
 		primary_color: robotColor,
 		secondary_color: robotColor,
@@ -54,20 +68,11 @@ const Robot_Factory = () => {
 			</Container>
 			<Container style={{ marginTop: "2em" }}>
 				<Row>
-					<Button variant="primary" onClick={newColor}>
+					<Button className="rnd-btn" variant="primary" onClick={newColor}>
 						Color
 					</Button>
-					<Button variant="primary" onClick={newColor}>
-						Head
-					</Button>
-					<Button variant="primary" onClick={newColor}>
-						Body
-					</Button>
-					<Button variant="primary" onClick={newColor}>
-						Feet
-					</Button>
-					<Button variant="primary" onClick={newColor}>
-						Face
+					<Button className="rnd-btn" variant="primary" onClick={newRobot}>
+						Randomizer
 					</Button>
 				</Row>
 			</Container>

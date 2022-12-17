@@ -9,7 +9,10 @@
     background-size: cover;
     background-position: 50%;
 }
-
+.rnd-btn{
+    margin:1em;
+    width: 250px
+}
 .robotBlock{
     /* For testing */
     border-style: dashed;
@@ -102,4 +105,39 @@
     mask-image: url(/robotParts/bodies/rnd-body-vector.svg);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+}
+.rnd01-body {
+    -webkit-mask-image: url(/robotParts/bodies/rnd01-body-vector.svg);
+    mask-image: url(/robotParts/bodies/rnd01-body-vector.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+.arm01 {
+    -webkit-mask-image: url(/robotParts/arms/arm01-vector.svg);
+    mask-image: url(/robotParts/arms/arm01-vector.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    position: absolute;
+    }
+.leftArm {
+    position: absolute;
+    top:12px;
+    left:-65px;
+    -webkit-transform-origin: 85% 12.5%;
+    -moz-transform-origin: 85% 12.5%;
+    -ms-transform-origin: 85% 12.5%;
+    -o-transform-origin: 85% 12.5%;
+    transform-origin: 85% 12.5%;
+}
+.rightArm{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: absolute;
+    top: 12px;
+    right: 8px;
+    -webkit-transform-origin: 85% 12.5%;
+    -moz-transform-origin: 85% 12.5%;
+    -ms-transform-origin: 85% 12.5%;
+    -o-transform-origin: 85% 12.5%;
+    transform-origin: 85% 12.5%;
 }

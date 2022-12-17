@@ -38,34 +38,19 @@ const Robot = (build) => {
 						/>
 					</div>
 
-					<div className="robotBlock headPosition  	" style={{}}>
+					<div className="robotBlock headPosition" style={{}}>
 						<div className={parts_list.head_shape} style={primaryColor}>
 							<img className="" src={parts_list.head} />
 							<img className="facePosition" src={parts_list.face} />
 						</div>
 					</div>
-					<div
-						className="robotBlock"
-						style={{
-							borderColor: "red",
-							height: "100%",
-							width: "40%",
-							position: "absolute",
-							top: 0,
-							right: -25,
-						}}
-					></div>
-					<div
-						className="robotBlock"
-						style={{
-							borderColor: "red",
-							height: "100%",
-							width: "40%",
-							position: "absolute",
-							top: 0,
-							left: -25,
-						}}
-					></div>
+
+					<div className="leftArm arm01 robotBlock " style={primaryColor}>
+						<img className="armImage" src="robotParts/arms/arm01.png" />
+					</div>
+					<div className="rightArm arm01 robotBlock " style={primaryColor}>
+						<img className="armImage" src="robotParts/arms/arm01.png" />
+					</div>
 				</div>
 				<div
 					className="robotBlock  "

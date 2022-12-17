@@ -5,7 +5,8 @@
 		{ "shape": "trp-body", "body": "trp-body-01.png" },
 		{ "shape": "rnd-body", "body": "rnd-body-01.png" },
 		{ "shape": "bxy-body", "body": "bxy-body-01.png" },
-		{ "shape": "pnt-body", "body": "pnt-body-01.png" }
+		{ "shape": "pnt-body", "body": "pnt-body-01.png" },
+		{ "shape": "rnd01-body", "body": "rnd01-body-01.png" }
 	],
 	"displays": ["disp01.gif", "disp02.gif"],
 	"heads": [
@@ -18,10 +19,7 @@
 		{ "shape": "sq01-head", "head": "sq03.png" },
 		{ "shape": "sq01-head", "head": "sq04.png" }
 	],
-	"arms": [
-		{ "shape": "sq", "arm": "sq-arm-01" },
-		{ "shape": "sq", "arm": "sq-arm-02" }
-	],
+	"arms": [{ "shape": "arm01", "arm": "arm01" }],
 	"feet": [
 		{ "shape": "legs", "arm": "legs-01" },
 		{ "shape": "legs", "arm": "legs-02" }
