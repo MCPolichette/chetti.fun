@@ -1,67 +1,53 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Button, Form } from "react-bootstrap";
-import Robot from "./Robot";
 import "./robotFactory.css";
-import Parts from "./parts.json";
+import parts from "./vector-parts.json";
+import VectorRobot from "./vectorRobot";
 
 const Robot_Factory = () => {
 	function randomColor() {
 		return `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
 	}
 	const getRandom = (arr) => {
-		return arr[Math.floor(Math.random() * arr.length)];
+		return Math.floor(Math.random() * arr.length);
 	};
+	function randomEverything() {
+		setRobotBody(getRandom(parts.bodies));
+		setRobotHead(getRandom(parts.heads));
+		setRobotColor(randomColor);
+		setEyeColor(randomColor);
+		setRobotEyes(getRandom(parts.eyes));
+		setRobotMouth(getRandom(parts.mouths));
+	}
+	const [robotBody, setRobotBody] = useState(getRandom(parts.bodies));
+	const [robotHead, setRobotHead] = useState(getRandom(parts.heads));
 	const [robotColor, setRobotColor] = useState(randomColor);
+	const [eyeColor, setEyeColor] = useState(randomColor);
+	const [robotEyes, setRobotEyes] = useState(getRandom(parts.eyes));
+	const [robotMouth, setRobotMouth] = useState(getRandom(parts.mouths));
 	function newColor() {
 		setRobotColor(randomColor);
 		console.log(robotColor);
 	}
-	const TEST_ROBOT = {
-		primary_color: randomColor(),
-		secondary_color: randomColor(),
-		body: getRandom(Parts.bodies),
-		display: getRandom(Parts.displays),
-		head: getRandom(Parts.heads),
-		face: getRandom(Parts.faces),
-	};
-	function newRobot() {
-		let newBuild = {
-			primary_color: robotColor,
-			secondary_color: robotColor,
-			body_shape: TEST_ROBOT.body.shape,
-			body: TEST_ROBOT.body.body,
-			display: TEST_ROBOT.display,
-			head_shape: TEST_ROBOT.head.shape,
-			head: TEST_ROBOT.head.head,
-			face: TEST_ROBOT.face,
-		};
 
-		updateRobot(newBuild);
-	}
-	const [thisRobot, updateRobot] = useState({
+	const vector_build = {
 		primary_color: robotColor,
-		secondary_color: robotColor,
-		body_shape: TEST_ROBOT.body.shape,
-		body: TEST_ROBOT.body.body,
-		display: TEST_ROBOT.display,
-		head_shape: TEST_ROBOT.head.shape,
-		head: TEST_ROBOT.head.head,
-		face: TEST_ROBOT.face,
-		arms_shape: "rnd",
-		arms: "rnd-arms-01",
-		feet_shape: "legs",
-		feet: "legs01",
-		accessories: "",
-	});
-	console.log(thisRobot);
+		eye_color: eyeColor,
+		head: robotHead,
+		body: robotBody,
+		mouth: robotMouth,
+		eyes: robotEyes,
+	};
+
 	return (
-		<>
+		<div style={{}}>
 			<Container>
 				<h1 style={{ backgroundColor: { robotColor } }}>Robot Factory</h1>
 				<Row>
 					<Container className="factory ">
 						<Row className="justify-content-center">
-							<Robot build={thisRobot} />
+							{/* <Robot build={thisRobot} /> */}
+							<VectorRobot build={vector_build} />
 						</Row>
 					</Container>
 				</Row>
@@ -71,7 +57,11 @@ const Robot_Factory = () => {
 					<Button className="rnd-btn" variant="primary" onClick={newColor}>
 						Color
 					</Button>
-					<Button className="rnd-btn" variant="primary" onClick={newRobot}>
+					<Button
+						className="rnd-btn"
+						variant="primary"
+						onClick={randomEverything}
+					>
 						Randomizer
 					</Button>
 				</Row>
@@ -83,7 +73,7 @@ const Robot_Factory = () => {
     -head selection
     etc....  */}
 			{/* A method to select saved robots? */}
-		</>
+		</div>
 	);
 };
 
