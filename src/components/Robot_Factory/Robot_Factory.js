@@ -18,8 +18,10 @@ const Robot_Factory = () => {
 		setEyeColor(randomColor);
 		setRobotEyes(getRandom(parts.eyes));
 		setRobotMouth(getRandom(parts.mouths));
+		setRobotArms(getRandom(parts.arms));
 	}
 	const [robotBody, setRobotBody] = useState(getRandom(parts.bodies));
+	const [robotArms, setRobotArms] = useState(getRandom(parts.arms));
 	const [robotHead, setRobotHead] = useState(getRandom(parts.heads));
 	const [robotColor, setRobotColor] = useState(randomColor);
 	const [eyeColor, setEyeColor] = useState(randomColor);
@@ -37,6 +39,7 @@ const Robot_Factory = () => {
 		body: robotBody,
 		mouth: robotMouth,
 		eyes: robotEyes,
+		arms: robotArms,
 	};
 
 	return (
@@ -66,13 +69,6 @@ const Robot_Factory = () => {
 					</Button>
 				</Row>
 			</Container>
-			{/* a row that contains the robot building container. (at least 3 overlapping <div>s) */}
-			{/* a row for control container, 
-    - color selection
-    - body selection
-    -head selection
-    etc....  */}
-			{/* A method to select saved robots? */}
 		</div>
 	);
 };
