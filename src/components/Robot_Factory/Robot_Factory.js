@@ -11,6 +11,15 @@ const Robot_Factory = () => {
 	const getRandom = (arr) => {
 		return Math.floor(Math.random() * arr.length);
 	};
+	const [robotBody, setRobotBody] = useState(getRandom(parts.bodies));
+	const [robotLegs, setRobotLegs] = useState(getRandom(parts.legs));
+	const [robotArms, setRobotArms] = useState(getRandom(parts.arms));
+	const [robotHead, setRobotHead] = useState(getRandom(parts.heads));
+	const [robotColor, setRobotColor] = useState(randomColor);
+	const [eyeColor, setEyeColor] = useState(randomColor);
+	const [robotEyes, setRobotEyes] = useState(getRandom(parts.eyes));
+	const [robotMouth, setRobotMouth] = useState(getRandom(parts.mouths));
+
 	function randomEverything() {
 		setRobotBody(getRandom(parts.bodies));
 		setRobotLegs(getRandom(parts.legs));
@@ -21,17 +30,29 @@ const Robot_Factory = () => {
 		setRobotMouth(getRandom(parts.mouths));
 		setRobotArms(getRandom(parts.arms));
 	}
-	const [robotBody, setRobotBody] = useState(getRandom(parts.bodies));
-	const [robotLegs, setRobotLegs] = useState(getRandom(parts.legs));
-	const [robotArms, setRobotArms] = useState(getRandom(parts.arms));
-	const [robotHead, setRobotHead] = useState(getRandom(parts.heads));
-	const [robotColor, setRobotColor] = useState(randomColor);
-	const [eyeColor, setEyeColor] = useState(randomColor);
-	const [robotEyes, setRobotEyes] = useState(getRandom(parts.eyes));
-	const [robotMouth, setRobotMouth] = useState(getRandom(parts.mouths));
-	function newColor() {
+	function randomRobotBody() {
+		setRobotBody(getRandom(parts.bodies));
+	}
+	function randomRobotLegs() {
+		setRobotLegs(getRandom(parts.legs));
+	}
+	function randomRobotHead() {
+		setRobotHead(getRandom(parts.heads));
+	}
+	function randomRobotColor() {
 		setRobotColor(randomColor);
-		console.log(robotColor);
+	}
+	function randomEyeColor() {
+		setEyeColor(randomColor);
+	}
+	function randomRobotEyes() {
+		setRobotEyes(getRandom(parts.eyes));
+	}
+	function randomRobotMouth() {
+		setRobotMouth(getRandom(parts.mouths));
+	}
+	function randomRobotArms() {
+		setRobotArms(getRandom(parts.arms));
 	}
 
 	const vector_build = {
@@ -57,18 +78,34 @@ const Robot_Factory = () => {
 						</Row>
 					</Container>
 				</Row>
+				<br />
+				<br />
 			</Container>
 			<Container style={{ marginTop: "2em" }}>
+				<Button className="" variant="primary" onClick={randomEverything}>
+					Randomizer
+				</Button>
 				<Row>
-					<Button className="rnd-btn" variant="primary" onClick={newColor}>
+					<Button className="rnd-btn" onClick={randomRobotBody}>
+						Body
+					</Button>
+					<Button className="rnd-btn" onClick={randomRobotLegs}>
+						Legs
+					</Button>
+					<Button className="rnd-btn" onClick={randomRobotHead}>
+						Head
+					</Button>
+					<Button className="rnd-btn" onClick={randomRobotColor}>
 						Color
 					</Button>
-					<Button
-						className="rnd-btn"
-						variant="primary"
-						onClick={randomEverything}
-					>
-						Randomizer
+					<Button className="rnd-btn" onClick={randomRobotEyes}>
+						Eyes
+					</Button>
+					<Button className="rnd-btn" onClick={randomRobotMouth}>
+						Mouth
+					</Button>
+					<Button className="rnd-btn" onClick={randomRobotArms}>
+						Arms
 					</Button>
 				</Row>
 			</Container>
