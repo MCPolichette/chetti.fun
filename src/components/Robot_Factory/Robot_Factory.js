@@ -13,6 +13,7 @@ const Robot_Factory = () => {
 	};
 	function randomEverything() {
 		setRobotBody(getRandom(parts.bodies));
+		setRobotLegs(getRandom(parts.legs));
 		setRobotHead(getRandom(parts.heads));
 		setRobotColor(randomColor);
 		setEyeColor(randomColor);
@@ -21,6 +22,7 @@ const Robot_Factory = () => {
 		setRobotArms(getRandom(parts.arms));
 	}
 	const [robotBody, setRobotBody] = useState(getRandom(parts.bodies));
+	const [robotLegs, setRobotLegs] = useState(getRandom(parts.legs));
 	const [robotArms, setRobotArms] = useState(getRandom(parts.arms));
 	const [robotHead, setRobotHead] = useState(getRandom(parts.heads));
 	const [robotColor, setRobotColor] = useState(randomColor);
@@ -40,6 +42,7 @@ const Robot_Factory = () => {
 		mouth: robotMouth,
 		eyes: robotEyes,
 		arms: robotArms,
+		legs: robotLegs,
 	};
 
 	return (
