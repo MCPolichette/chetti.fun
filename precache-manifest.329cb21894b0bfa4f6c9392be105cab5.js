@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "db998900711a6041ea2a",
-    "url": "/static/css/main.437b1163.chunk.css"
+    "revision": "df8dc2985dda776b468f",
+    "url": "/static/css/main.a22e7385.chunk.css"
   },
   {
-    "revision": "db998900711a6041ea2a",
-    "url": "/static/js/main.db998900.chunk.js"
+    "revision": "df8dc2985dda776b468f",
+    "url": "/static/js/main.df8dc298.chunk.js"
   },
   {
     "revision": "63c4c0bccb546d86241a",
     "url": "/static/js/1.63c4c0bc.chunk.js"
   },
   {
-    "revision": "061eed5ae3d310cdd5de",
-    "url": "/static/js/2.061eed5a.chunk.js"
+    "revision": "f41ee959c289cd02d4b7",
+    "url": "/static/js/2.f41ee959.chunk.js"
   },
   {
     "revision": "f1067790a6c086a0c012",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/static/media/pramod-tiwari-3UgbE1b43j8-unsplash.7bd4b931.jpg"
   },
   {
-    "revision": "7c0a4b854ef6dd02b4494066d081955c",
+    "revision": "7cea69aebdc1733da5b7c7674026a190",
     "url": "/index.html"
   }
 ];
