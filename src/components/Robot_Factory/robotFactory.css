@@ -21,7 +21,7 @@
 
 .static {
     animation-name: static;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
 }
 
@@ -32,34 +32,41 @@
 }
 .static_swinging_right {
     animation-name: static_swinging_right;
-    animation-duration: 3s;
+    animation-duration: 3.8s;
     animation-iteration-count: infinite;
     transform: scaleX(-1);
 }
 .drive {
+    transform: scale(.7);
     animation-name: drive;
     animation-duration: 5s;
     ;
 }
 @keyframes drive {
-    0% {
-        left: 0px;
+    0% {transform: scale(.01);
+        left: 300px;
+        top: 200px
+        
     }
 
     25% {
-        left: 100px;
+        transform: scale(.1);
+            left: 100px;
+            top: 200px
     }
 
     50% {
-        left: 25px;
+        transform: scale(.5);
+            left: 25px;
+            top: 200px
     }
 
-    75% {
-        left: 30px;
-    }
+   
 
     100% {
-        left: 40px;
+        transform: scale(.7);
+        top:0;
+        
     }
 }
 
@@ -87,15 +94,15 @@
 
 @keyframes static_swinging {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(5deg);
     }
 
     25% {
-        transform: rotate(0deg);
+        transform: rotate(6deg);
     }
 
     50% {
-        transform: rotate(-3deg);
+        transform: rotate(3deg);
     }
 
     75% {
@@ -103,12 +110,12 @@
     }
 
     100% {
-        transform: rotate(0deg);
+        transform: rotate(5deg);
     }
 }
 @keyframes static_swinging_right {
     0% {
-        transform: scaleX(-1) rotate(-3deg);
+        transform: scaleX(-1) rotate(5deg);
     }
          50% {
         transform: scaleX(-1) rotate(-0deg)
@@ -117,7 +124,7 @@
                       transform: scaleX(-1) rotate(0deg)
                   }
                   100% {
-                transform: scaleX(-1) rotate(-3deg)
+                transform: scaleX(-1) rotate(5deg)
                   }
 
     
