@@ -35,9 +35,9 @@ const VectorRobot = (build) => {
 	const eyes = parts.eyes[build.build.eyes];
 	const body = parts.bodies[build.build.body];
 	const legs = parts.legs[build.build.legs];
-	const tall = { position: "absolute", top: legs.height };
 	const arm = parts.arms[build.build.arms];
-	console.log(legs);
+	const tall = { position: "absolute", top: legs.height + "px" };
+	const shadowPosition = 40 + legs.height;
 
 	const pupil = {
 		fill: build.build.eye_color,
@@ -70,6 +70,7 @@ const VectorRobot = (build) => {
 						<path d={body["shadow-shape"]} style={shadow} />
 					</g>
 				</svg>
+
 				<svg
 					id="legs"
 					style={{
@@ -89,6 +90,9 @@ const VectorRobot = (build) => {
 						<path d={legs["primary-shape"]} style={style} />
 						<path d={legs["light"]} style={light} />
 						<path d={legs["shadow-shape"]} style={shadow} />
+						<path d={legs["light"]} style={light} />
+						<path d={legs["dark"]} style={dark} />
+						{/* <path d={legs["shadow"]} style={shadow} /> */}
 					</g>
 				</svg>
 
