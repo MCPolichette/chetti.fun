@@ -26,14 +26,19 @@ const Home = () => {
 			link: "/robot_factory",
 			icon: "fa-solid fa-robot",
 		},
+		{
+			title: "Balloons",
+			link: "/balloon",
+			icon: "fa-solid fa-circle",
+		},
 	];
 	return (
 		<Container>
 			<p> welcome to </p>
 			<h1>Chetti.fun</h1>
 			<p className="small">
-				This site was made to help learn better coding, and to provide Ad-Free
-				personalized mobile games for my 3 year old
+				This site was made to help learn better coding, and to provide
+				Ad-Free personalized mobile games for my 3 year old
 			</p>
 			<hr />
 			<Row className="justify-content-center">
