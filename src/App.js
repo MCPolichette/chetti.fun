@@ -4,7 +4,7 @@ import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
 import DiceGame from "./components//Dice_Game/DiceGame";
 import Robot_Factory from "./components/Robot_Factory/Robot_Factory.js";
-import { FruitFrenzy } from "./components/fruit-frenzy/FruitFrenzy";
+
 import Memory from "./components/Memory/Memory.js";
 import NavMenu from "./components/HomeAndNavigation/NavMenu.js";
 import { PickNPlace } from "./components/pick-n-place/PickNPlace";
@@ -30,10 +30,8 @@ function App() {
 					<Route path="/robot_factory">
 						<Robot_Factory />
 					</Route>
-					<Route path="/fruit_frenzy">
-						<FruitFrenzy />
-					</Route>
-					<Route path="/Baloon">
+
+					<Route path="/balloon">
 						<Game />
 					</Route>
 					<Redirect to="/" />
