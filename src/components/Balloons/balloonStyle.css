@@ -1,0 +1,13 @@
+.game-window {
+	position: relative;
+	height: auto;
+	border: 2px solid #000;
+}
+
+.balloon {
+	position: absolute;
+	width: 40px;
+	height: 60px;
+	background-color: #ff4081;
+	border-radius: 50%;
+}

@@ -2,10 +2,10 @@ import React from "react";
 import parts from "./vector-parts.json";
 import "./robotFactory.css";
 
-import { useSpring, animated } from "@react-spring/web";
-import { useDrag } from "@use-gesture/react";
-import { Container } from "react-bootstrap";
-
+// Considerations.
+// - update styling to a CSS file.. to clean up this page
+// - changing positioning of arms and legs, based on the SVG drawing dimensions. (arm  angle based on the torso ) (leg positioning, more accurate.)
+// new Arm file with MUCH smaller canvas.
 const VectorRobot = (build) => {
 	console.log(build.build);
 	const style = {
@@ -14,6 +14,7 @@ const VectorRobot = (build) => {
 		strokeWidth: "6px",
 	};
 	// The standard object (NON-DYNAMIC) STYLING should be moved to aCSS file
+	// {black (tires), tireaccents?, dark(semiTransparent?), light(grey), primaryColor (dynamic), secondaryColor?, white(eyepart), Empty(no Fill, with standard stroke), shadow-part,  }
 	const dark = {
 		fill: "black",
 		opacity: ".95",
@@ -150,7 +151,7 @@ const VectorRobot = (build) => {
 						top: "0",
 						height: "150px",
 					}}
-					className="robot"
+					className=""
 					viewBox="0 0 209 209"
 					version="1.1"
 					xmlns="http://www.w3.org/2000/svg"
