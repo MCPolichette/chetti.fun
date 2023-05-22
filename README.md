@@ -6,9 +6,9 @@ This project is built arround the idea of building a fun little web app for my 3
 
 ## Goals
 
-- Host the website on my own domain (www.chetti.fun)
-- Build react based components so that new 'style' games can be developed over time
-- Provide a Fun, Ad Free, Safe for kids, Mobile environment.
+-   Host the website on my own domain (www.chetti.fun)
+-   Build react based components so that new 'style' games can be developed over time
+-   Provide a Fun, Ad Free, Safe for kids, Mobile environment.
 
 ### FIRST PROJECT
 
@@ -32,12 +32,15 @@ Factory Photo by <a href="https://unsplash.com/@kowalikus?utm_source=unsplash&ut
 <hr>
 Sounds Used
 
-- Dice Roll - https://freesound.org/s/574449/ - F.M.Audio
-- Dice Roll - https://freesound.org/s/574445/ - F.M.Audio
-- Dice Roll - https://freesound.org/s/389721/ - Uminari
+-   Dice Roll - https://freesound.org/s/574449/ - F.M.Audio
+-   Dice Roll - https://freesound.org/s/574445/ - F.M.Audio
+-   Dice Roll - https://freesound.org/s/389721/ - Uminari
 
-- Error Sound - https://freesound.org/s/419023/ -Jacco18
-- Win Sound - https://freesound.org/s/456966/ -FunWithSound
+-   Error Sound - https://freesound.org/s/419023/ -Jacco18
+-   Win Sound - https://freesound.org/s/456966/ -FunWithSound
+
+Pop Sounds
+https://freesound.org/s/665182/
 
 <hr>
 <!-- May not use these icons.. looking for food icons for Menu options -->

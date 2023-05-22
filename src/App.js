@@ -4,9 +4,11 @@ import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
 import DiceGame from "./components//Dice_Game/DiceGame";
 import Robot_Factory from "./components/Robot_Factory/Robot_Factory.js";
+import { FruitFrenzy } from "./components/fruit-frenzy/FruitFrenzy";
 import Memory from "./components/Memory/Memory.js";
 import NavMenu from "./components/HomeAndNavigation/NavMenu.js";
 import { PickNPlace } from "./components/pick-n-place/PickNPlace";
+import Game from "./components/Balloons/Balloons.js";
 
 function App() {
 	return (
@@ -27,6 +29,12 @@ function App() {
 					</Route>
 					<Route path="/robot_factory">
 						<Robot_Factory />
+					</Route>
+					<Route path="/fruit_frenzy">
+						<FruitFrenzy />
+					</Route>
+					<Route path="/Baloon">
+						<Game />
 					</Route>
 					<Redirect to="/" />
 				</Switch>

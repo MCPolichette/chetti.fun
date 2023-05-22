@@ -18,7 +18,18 @@
     border-color: white;
     border-width: 2px;
 }
-
+.new_head{
+    -webkit-transform: rotateX(-90deg) translateZ(-50px);
+        transform: rotateX(-90deg) translateZ(-50px);
+        -webkit-transition: -webkit-transform .3s;
+            transition: transform .3s;
+            /* Animate the transform properties */
+        
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            /* <-NB */
+            height: 100px;
+}
 .static {
     animation-name: static;
     animation-duration: 5s;
