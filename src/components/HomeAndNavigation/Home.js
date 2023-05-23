@@ -7,7 +7,7 @@ import "./home.css";
 const Home = () => {
 	let gamelist = [
 		{
-			title: "Dice Game!",
+			title: "Dice Counting!",
 			link: "/dice",
 			icon: "fa-solid fa-dice",
 		},
@@ -27,9 +27,9 @@ const Home = () => {
 			icon: "fa-solid fa-robot",
 		},
 		{
-			title: "Balloons",
+			title: "Balloon Catcher",
 			link: "/balloon",
-			icon: "fa-solid fa-circle",
+			icon: "fa-solid fa-location-pin",
 		},
 	];
 	return (
@@ -38,7 +38,7 @@ const Home = () => {
 			<h1>Chetti.fun</h1>
 			<p className="small">
 				This site was made to help learn better coding, and to provide
-				Ad-Free personalized mobile games for my 3 year old
+				Ad-Free personalized mobile games for kids
 			</p>
 			<hr />
 			<Row className="justify-content-center">

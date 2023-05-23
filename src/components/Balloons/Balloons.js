@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import "./balloonStyle.css"; // Import the CSS file for styling
 import pop_1 from "../../site_sounds/323740__reitanna__mouth-pop2.wav";
 import pop_2 from "../../site_sounds/665182__el_boss__item-or-material-pickup-pop-2-of-3.wav";
@@ -61,14 +62,14 @@ const Game = () => {
 	const [gameOver, setGameOver] = useState(false);
 
 	const addBalloon = () => {
-		if (balloons.length >= 10) {
+		if (balloons.length >= 6) {
 			return; // Maximum number of balloons reached, exit the function
 		}
 
 		const newBalloon = {
 			id: Date.now(),
-			left: Math.floor(Math.random() * (window.innerWidth - 100)),
-			speed: Math.floor(Math.random() * 11) + 1,
+			left: Math.floor(Math.random() * (window.innerWidth - 80)),
+			speed: Math.floor(Math.random() * 18) + 5,
 		};
 
 		setBalloons((prevBalloons) => [...prevBalloons, newBalloon]);
@@ -88,7 +89,7 @@ const Game = () => {
 
 	useEffect(() => {
 		if (!gameOver) {
-			const interval = setInterval(addBalloon, 1000);
+			const interval = setInterval(addBalloon, 500);
 
 			return () => {
 				clearInterval(interval);
@@ -105,22 +106,33 @@ const Game = () => {
 	useEffect(() => {
 		if (score >= 20) {
 			setGameOver(true);
+			setBalloons([]);
+
 			win_sound.play();
 		}
 	}, [score]);
 
 	return (
-		<div>
+		<Container className=" gamectr gameText">
 			<h1>Catch the Falling Balloons</h1>
 			<div className="score">Score: {score}</div>
 			{gameOver && (
-				<div>
-					<h2>Game Over!</h2>
-					<button onClick={handleRestart}>Play Again</button>
-				</div>
+				<Row>
+					<Col className="game-over align-items-center">
+						<h2>Game Over!</h2>
+						<Button
+							type="button"
+							size="lg"
+							variant=" btn-success"
+							onClick={handleRestart}
+						>
+							Play Again
+						</Button>
+					</Col>
+				</Row>
 			)}
 
-			<div className="game-window">
+			<Row className="game-window align-items-center">
 				{balloons.map((balloon) => (
 					<Balloon
 						key={balloon.id}
@@ -130,8 +142,8 @@ const Game = () => {
 						onCatch={handleCatch}
 					/>
 				))}
-			</div>
-		</div>
+			</Row>
+		</Container>
 	);
 };
 

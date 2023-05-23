@@ -1,13 +1,23 @@
 .game-window {
 	position: relative;
 	height: auto;
-	border: 2px solid #000;
+	margin-top: auto;
+	margin-bottom: auto;
+	border: yellow;
 }
 
 .balloon {
 	position: absolute;
-	width: 40px;
-	height: 60px;
-	background-color: #ff4081;
+	width: 45px;
+	height: 65px;
+	/* background-color: #ff4081; */
 	border-radius: 50%;
+}
+.btn {
+	text-shadow: 3px 3px 2px black;
+	box-shadow: 5px 5px 5px black;
+}
+.game-over {
+	position: absolute;
+	height: auto;
 }
